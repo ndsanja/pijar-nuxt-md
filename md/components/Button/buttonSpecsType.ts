@@ -1,35 +1,3 @@
-export const specs = {
-  layout: {
-    height: '',
-    shape: '',
-    iconSize: '',
-    paddingLeft: '',
-    paddingRight: '',
-    paddingLeftWithIcon: '',
-    paddingRightWithIcon: '',
-    paddingBetweenElement: '',
-    labelTextAlignment: '',
-  },
-  design: {
-    container: {
-      color: '',
-      shadowColor: '',
-      elevation: '',
-    },
-    labelText: {
-      color: '',
-      font: '',
-      lineHeight: '',
-      size: '',
-      tracking: '',
-      weight: '',
-    },
-    icon: {
-      color: '',
-    },
-  },
-};
-
 export interface ButtonSpecs {
   layout?: ButtonSpecsLayout;
   design?: {
