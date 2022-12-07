@@ -54,9 +54,11 @@ export const themeColors = (isLight: boolean) => {
             light: color['neutral-variant'][50],
             dark: color['neutral-variant'][60],
             variant: {
-              default: isLight ? '#CAC4D0' : '#49454F',
-              light: '#CAC4D0',
-              dark: '#49454F',
+              default: isLight
+                ? color['neutral-variant'][80]
+                : color['neutral-variant'][30],
+              light: color['neutral-variant'][80],
+              dark: color['neutral-variant'][30],
             },
           },
           background: {
@@ -76,39 +78,39 @@ export const themeColors = (isLight: boolean) => {
               dark: color['neutral-variant'][30],
             },
             tint: {
-              default: isLight ? '#6750A4' : '#D0BCFF',
-              light: '#6750A4',
-              dark: '#D0BCFF',
+              default: isLight ? color.primary[40] : color.primary[80],
+              light: color.primary[40],
+              dark: color.primary[80],
             },
           },
           inverse: {
-            default: isLight ? '#D0BCFF' : '#6750A4',
+            default: isLight ? color.primary[80] : color.primary[40],
             primary: {
-              light: '#D0BCFF',
-              dark: '#6750A4',
+              light: color.primary[80],
+              dark: color.primary[40],
             },
             surface: {
-              default: isLight ? '#313033' : '#E6E1E5',
-              light: '#313033',
-              dark: '#E6E1E5',
+              default: isLight ? color.neutral[20] : color.neutral[90],
+              light: color.neutral[20],
+              dark: color.neutral[90],
             },
             on: {
               surface: {
-                default: isLight ? '#F4EFF4' : '#313033',
-                light: '#F4EFF4',
-                dark: '#313033',
+                default: isLight ? color.neutral[95] : color.neutral[20],
+                light: color.neutral[95],
+                dark: color.neutral[20],
               },
             },
           },
           shadow: {
-            default: isLight ? '#000000' : '#000000',
-            light: '#000000',
-            dark: '#000000',
+            default: isLight ? color.neutral[0] : color.neutral[0],
+            light: color.neutral[0],
+            dark: color.neutral[0],
           },
           scrim: {
-            default: isLight ? '#000000' : '#000000',
-            light: '#000000',
-            dark: '#000000',
+            default: isLight ? color.neutral[0] : color.neutral[0],
+            light: color.neutral[0],
+            dark: color.neutral[0],
           },
           on: {
             primary: {
