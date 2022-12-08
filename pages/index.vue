@@ -3,7 +3,9 @@ import { Button } from '~~/md'
 </script>
 
 <template>
-  <Button start-icon="+" color="error">
-    <p>Hello</p>
-  </Button>
+  <div class="flex items-center justify-center space-x-4 py-10">
+    <Button start-icon="+" class="drop-shadow-elevation-1">
+      <p>Hello</p>
+    </Button>
+  </div>
 </template>

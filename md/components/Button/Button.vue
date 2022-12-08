@@ -9,7 +9,6 @@ type Props = {
   startIcon?: any
   endIcon?: any
   specs?: ButtonSpecs
-
 }
 
 const { variant, size, color, startIcon, endIcon, specs: specsProps } = withDefaults(defineProps<Props>(), {
@@ -66,10 +65,10 @@ const specs = buttonSpecs(startIcon, endIcon, color)
   ${specsProps?.layout?.shape}
   ${specsProps?.layout?.labelTextAlignment}
   
-  disabled:bg-md-sys-color-on-surface-light/[.12]
-  dark:disabled:bg-md-sys-color-on-surface-dark/[.12]
-  disabled:text-md-sys-color-on-surface-light/[.38]
-  dark:disabled:text-md-sys-color-on-surface-dark/[.38]
+  disabled:bg-on-surface-light/[.12]
+  dark:disabled:bg-on-surface-dark/[.12]
+  disabled:text-on-surface-light/[.38]
+  dark:disabled:text-on-surface-dark/[.38]
   `)">
     <span v-if="startIcon" :class="tw(`
     ${specs.layout?.iconSize}

@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 import { themeColors } from './utils/md/theme';
 import { typography } from './md/themes/typography';
 import { token } from './md/tokens/tokens';
+import { elevation } from './md/themes/elevation';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const colorsMode = themeColors(true).md.sys.color;
@@ -245,6 +246,14 @@ export default <Partial<Config>>(<unknown>{
         'title-large': typography.md.sys.typescale.title.large.tracking,
         'title-medium': typography.md.sys.typescale.title.medium.tracking,
         'title-small': typography.md.sys.typescale.title.small.tracking,
+      },
+      dropShadow: {
+        'elevation-0': elevation.md.sys.elevation.level[0],
+        'elevation-1': elevation.md.sys.elevation.level[1],
+        'elevation-2': elevation.md.sys.elevation.level[2],
+        'elevation-3': elevation.md.sys.elevation.level[3],
+        'elevation-4': elevation.md.sys.elevation.level[4],
+        'elevation-5': elevation.md.sys.elevation.level[5],
       },
     },
   },

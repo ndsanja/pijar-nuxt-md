@@ -20,38 +20,32 @@ export const buttonSpecs = (startIcon: any, endIcon: any, color: Color) => {
     //DESIGN
     design: {
       container: {
-        color: `
-      ${color === 'primary' && 'bg-primary-light dark:bg-primary-dark'}      
-      ${
-        color === 'secondary' && 'bg-secondary-light dark:bg-secondary-dark'
-      }      
-      ${color === 'tertiary' && 'bg-tertiary-light dark:bg-tertiary-dark'}      
-      ${color === 'error' && 'bg-error-light dark:bg-error-dark'}      
-      bg-primary-light dark:bg-primary-dark
-      `,
-        elevation: '',
+        color:
+          color === 'primary'
+            ? 'bg-primary-light dark:bg-primary-dark'
+            : color === 'secondary'
+            ? 'bg-secondary-light dark:bg-secondary-dark'
+            : color === 'tertiary'
+            ? 'bg-tertiary-light dark:bg-tertiary-dark'
+            : color === 'error'
+            ? 'bg-error-light dark:bg-error-dark'
+            : 'bg-primary-light dark:bg-primary-dark',
+        elevation: 'drop-shadow-elevation-0',
         shadowColor: 'shadow-shadow-light dark:shadow-shadow-light',
       },
 
       //LABEL TEXT
       labelText: {
-        color: `
-      ${
-        color === 'primary' && 'text-on-primary-light dark:text-on-primary-dark'
-      }      
-      ${
-        color === 'secondary' &&
-        'text-on-secondary-light dark:text-on-secondary-dark'
-      }      
-      ${
-        color === 'tertiary' &&
-        'text-on-tertiary-light dark:text-on-tertiary-dark'
-      }      
-      ${
-        color === 'error' && 'text-on-error-light dark:text-on-error-dark'
-      }      
-      text-on-primary-light dark:text-on-primary-dark
-      `,
+        color:
+          color === 'primary'
+            ? 'text-on-primary-light dark:text-on-primary-dark'
+            : color === 'secondary'
+            ? 'text-on-secondary-light dark:text-on-secondary-dark'
+            : color === 'tertiary'
+            ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
+            : color === 'error'
+            ? 'text-on-error-light dark:text-on-error-dark'
+            : 'text-on-primary-light dark:text-on-primary-dark',
         font: 'font-brand',
         size: 'text-label-large',
         lineHeight: 'leading-label-large',
@@ -61,23 +55,16 @@ export const buttonSpecs = (startIcon: any, endIcon: any, color: Color) => {
 
       //ICON
       icon: {
-        color: `
-      ${
-        color === 'primary' && 'text-on-primary-light dark:text-on-primary-dark'
-      }      
-      ${
-        color === 'secondary' &&
-        'text-on-secondary-light dark:text-on-secondary-dark'
-      }      
-      ${
-        color === 'tertiary' &&
-        'text-on-tertiary-light dark:text-on-tertiary-dark'
-      }      
-      ${
-        color === 'error' && 'text-on-error-light dark:text-on-error-dark'
-      }      
-      text-on-primary-light dark:text-on-primary-dark
-      `,
+        color:
+          color === 'primary'
+            ? 'text-on-primary-light dark:text-on-primary-dark'
+            : color === 'secondary'
+            ? 'text-on-secondary-light dark:text-on-secondary-dark'
+            : color === 'tertiary'
+            ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
+            : color === 'error'
+            ? 'text-on-error-light dark:text-on-error-dark'
+            : 'text-on-primary-light dark:text-on-primary-dark',
       },
     },
   };
