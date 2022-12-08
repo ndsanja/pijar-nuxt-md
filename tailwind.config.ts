@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
-import { tokens } from './utils/md/tokens';
 import { themeColors } from './utils/md/theme';
 import { typography } from './md/themes/typography';
+import { token } from './md/tokens/tokens';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const colorsMode = themeColors(true);
+const colorsMode = themeColors(true).md.sys.color;
 const srcDir = '.';
 
 export default <Partial<Config>>(<unknown>{
@@ -22,6 +22,135 @@ export default <Partial<Config>>(<unknown>{
   ],
   theme: {
     extend: {
+      colors: {
+        primary: {
+          light: colorsMode.primary.light,
+          dark: colorsMode.primary.dark,
+          container: {
+            light: colorsMode.primary.container.light,
+            dark: colorsMode.primary.container.dark,
+          },
+        },
+        secondary: {
+          light: colorsMode.secondary.light,
+          dark: colorsMode.secondary.dark,
+          container: {
+            light: colorsMode.secondary.container.light,
+            dark: colorsMode.secondary.container.dark,
+          },
+        },
+        tertiary: {
+          light: colorsMode.tertiary.light,
+          dark: colorsMode.tertiary.dark,
+          container: {
+            light: colorsMode.tertiary.container.light,
+            dark: colorsMode.tertiary.container.dark,
+          },
+        },
+        error: {
+          light: colorsMode.error.light,
+          dark: colorsMode.error.dark,
+          container: {
+            light: colorsMode.error.container.light,
+            dark: colorsMode.error.container.dark,
+          },
+        },
+        outline: {
+          light: colorsMode.outline.light,
+          dark: colorsMode.outline.dark,
+          variant: {
+            light: colorsMode.outline.variant.light,
+            dark: colorsMode.outline.variant.dark,
+          },
+        },
+        background: {
+          light: colorsMode.background.light,
+          dark: colorsMode.background.dark,
+        },
+        surface: {
+          light: colorsMode.surface.light,
+          dark: colorsMode.surface.dark,
+          variant: {
+            light: colorsMode.surface.variant.light,
+            dark: colorsMode.surface.variant.dark,
+          },
+          tint: {
+            light: colorsMode.surface.tint.light,
+            dark: colorsMode.surface.tint.dark,
+          },
+        },
+        inverse: {
+          primary: {
+            light: colorsMode.inverse.primary.light,
+            dark: colorsMode.inverse.primary.dark,
+          },
+          surface: {
+            light: colorsMode.inverse.surface.light,
+            dark: colorsMode.inverse.surface.dark,
+          },
+          on: {
+            surface: {
+              light: colorsMode.inverse.on.surface.light,
+              dark: colorsMode.inverse.on.surface.dark,
+            },
+          },
+        },
+        shadow: {
+          light: colorsMode.shadow.light,
+          dark: colorsMode.shadow.dark,
+        },
+        scrim: {
+          light: colorsMode.scrim.light,
+          dark: colorsMode.scrim.dark,
+        },
+        on: {
+          primary: {
+            light: colorsMode.on.primary.light,
+            dark: colorsMode.on.primary.dark,
+            container: {
+              light: token.md.ref.palette.primary[10],
+              dark: token.md.ref.palette.primary[90],
+            },
+          },
+          secondary: {
+            light: colorsMode.on.secondary.light,
+            dark: colorsMode.on.secondary.dark,
+            container: {
+              light: colorsMode.on.secondary.container.light,
+              dark: colorsMode.on.secondary.container.dark,
+            },
+          },
+          tertiary: {
+            light: colorsMode.on.tertiary.light,
+            dark: colorsMode.on.tertiary.dark,
+            container: {
+              light: colorsMode.on.tertiary.container.light,
+              dark: colorsMode.on.tertiary.container.dark,
+            },
+          },
+          error: {
+            light: colorsMode.on.error.light,
+            dark: colorsMode.on.error.dark,
+            container: {
+              light: colorsMode.on.error.container.light,
+              dark: colorsMode.on.error.container.dark,
+            },
+          },
+          background: {
+            light: colorsMode.on.background.light,
+            dark: colorsMode.on.background.dark,
+          },
+          surface: {
+            light: colorsMode.on.surface.light,
+            dark: colorsMode.on.surface.dark,
+            variant: {
+              light: colorsMode.on.surface.variant.light,
+              dark: colorsMode.on.surface.variant.dark,
+            },
+          },
+        },
+      },
+
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         brand: ['Roboto', ...defaultTheme.fontFamily.sans],
@@ -118,6 +247,5 @@ export default <Partial<Config>>(<unknown>{
         'title-small': typography.md.sys.typescale.title.small.tracking,
       },
     },
-    colors: { ...tokens, ...colorsMode },
   },
 });

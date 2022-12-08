@@ -84,8 +84,8 @@ export const themeColors = (isLight: boolean) => {
             },
           },
           inverse: {
-            default: isLight ? color.primary[80] : color.primary[40],
             primary: {
+              default: isLight ? color.primary[80] : color.primary[40],
               light: color.primary[80],
               dark: color.primary[40],
             },
@@ -117,11 +117,11 @@ export const themeColors = (isLight: boolean) => {
               default: isLight ? color.primary[100] : color.primary[20],
               light: color.primary[100],
               dark: color.primary[20],
-            },
-            container: {
-              default: isLight ? color.primary[10] : color.primary[90],
-              light: color.primary[10],
-              dark: color.primary[90],
+              container: {
+                default: isLight ? color.primary[10] : color.primary[90],
+                light: color.primary[10],
+                dark: color.primary[90],
+              },
             },
             secondary: {
               default: isLight ? color.secondary[100] : color.secondary[20],

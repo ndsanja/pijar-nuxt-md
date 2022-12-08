@@ -4,6 +4,7 @@ type Color = 'primary' | 'secondary' | 'tertiary' | 'error' | undefined;
 
 export const buttonSpecs = (startIcon: any, endIcon: any, color: Color) => {
   const buttonSpecs: ButtonSpecs = {
+    //LAYOUT
     layout: {
       height: 'h-10',
       paddingLeft: startIcon ? '' : 'pl-6',
@@ -15,58 +16,68 @@ export const buttonSpecs = (startIcon: any, endIcon: any, color: Color) => {
       iconSize: 'text-lg',
       labelTextAlignment: 'text-center',
     },
+
+    //DESIGN
     design: {
       container: {
         color: `
+      ${color === 'primary' && 'bg-primary-light dark:bg-primary-dark'}      
       ${
-        color === 'primary' &&
-        'bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark'
+        color === 'secondary' && 'bg-secondary-light dark:bg-secondary-dark'
       }      
-      ${
-        color === 'secondary' &&
-        'bg-md-sys-color-secondary-light dark:bg-md-sys-color-secondary-dark'
-      }      
-      ${
-        color === 'tertiary' &&
-        'bg-md-sys-color-tertiary-light dark:bg-md-sys-color-tertiary-dark'
-      }      
-      ${
-        color === 'error' &&
-        'bg-md-sys-color-error-light dark:bg-md-sys-color-error-dark'
-      }      
-      bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark
+      ${color === 'tertiary' && 'bg-tertiary-light dark:bg-tertiary-dark'}      
+      ${color === 'error' && 'bg-error-light dark:bg-error-dark'}      
+      bg-primary-light dark:bg-primary-dark
       `,
         elevation: '',
-        shadowColor: '',
+        shadowColor: 'shadow-shadow-light dark:shadow-shadow-light',
       },
+
+      //LABEL TEXT
       labelText: {
         color: `
       ${
-        color === 'primary' &&
-        'text-md-sys-color-on-primary-light dark:text-md-sys-color-on-primary-dark'
+        color === 'primary' && 'text-on-primary-light dark:text-on-primary-dark'
       }      
       ${
         color === 'secondary' &&
-        'text-md-sys-color-on-secondary-light dark:text-md-sys-color-on-secondary-dark'
+        'text-on-secondary-light dark:text-on-secondary-dark'
       }      
       ${
         color === 'tertiary' &&
-        'text-md-sys-color-on-tertiary-light dark:text-md-sys-color-on-tertiary-dark'
+        'text-on-tertiary-light dark:text-on-tertiary-dark'
       }      
       ${
-        color === 'error' &&
-        'text-md-sys-color-on-error-light dark:text-md-sys-color-on-error-dark'
+        color === 'error' && 'text-on-error-light dark:text-on-error-dark'
       }      
-      text-md-sys-color-on-primary-light dark:text-md-sys-color-on-primary-dark
+      text-on-primary-light dark:text-on-primary-dark
       `,
-        font: '',
-        size: '',
-        lineHeight: '',
-        tracking: '',
-        weight: '',
+        font: 'font-brand',
+        size: 'text-label-large',
+        lineHeight: 'leading-label-large',
+        tracking: 'tracking-label-large',
+        weight: 'font-label-large',
       },
+
+      //ICON
       icon: {
-        color: '',
+        color: `
+      ${
+        color === 'primary' && 'text-on-primary-light dark:text-on-primary-dark'
+      }      
+      ${
+        color === 'secondary' &&
+        'text-on-secondary-light dark:text-on-secondary-dark'
+      }      
+      ${
+        color === 'tertiary' &&
+        'text-on-tertiary-light dark:text-on-tertiary-dark'
+      }      
+      ${
+        color === 'error' && 'text-on-error-light dark:text-on-error-dark'
+      }      
+      text-on-primary-light dark:text-on-primary-dark
+      `,
       },
     },
   };
