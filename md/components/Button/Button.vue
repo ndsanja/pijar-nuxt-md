@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { ButtonSpecs } from '~~/md/components/Button/types/buttonSpecsType'
-import { buttonSpecs } from '~~/md/components/Button/specs'
-import { defaultButtonSpecs } from './specs/default';
-import { overrideButtonSpecs } from './specs/override';
+//Filled Button
+import { buttonFilledSpecs } from '~~/md/components/Button/specs/variant/filled/index'
+import { ButtonSpecsType } from '~~/md/components/Button/types/ButtonSpecsType'
+
+//CreateTheme
+import { createTheme } from '../../createTheme'
 
 type Props = {
   variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated'
@@ -10,62 +12,43 @@ type Props = {
   color?: 'primary' | 'secondary' | 'tertiary' | 'error'
   startIcon?: any
   endIcon?: any
-  specs?: ButtonSpecs
+  specs?: ButtonSpecsType
 }
 
-const { variant, size, color, startIcon, endIcon, specs: propsButtonSpecs } = withDefaults(defineProps<Props>(), {
+const { color, endIcon, size, startIcon, variant, specs: propsSpecs } = withDefaults(defineProps<Props>(), {
   variant: 'filled',
   color: 'primary',
   size: 'medium'
 })
 
-const defaultSpecs = defaultButtonSpecs({ color, endIcon, size, startIcon, variant })
-const overrideSpecs = overrideButtonSpecs({ color, endIcon, size, startIcon, variant })
+const theme = createTheme()
 
-const specs = buttonSpecs({
-  default: defaultSpecs,
-  override: overrideSpecs,
-  props: propsButtonSpecs
-})
+const filled = buttonFilledSpecs({
+  override: theme.components.button.variant.filled,
+  props: propsSpecs?.variant?.filled
+}, { color, endIcon, size, startIcon, variant })
+
+
 </script>
 
 <template>
-  <button :class="tw(`
-    inline-flex
-    items-center
-    justify-center
-  ${specs.design?.container?.color}
-  ${specs.design?.container?.elevation}
-  ${specs.design?.container?.shadowColor}
-  
-  ${specs.design?.labelText?.color}
-  ${specs.design?.labelText?.font}
-  ${specs.design?.labelText?.lineHeight}
-  ${specs.design?.labelText?.size}
-  ${specs.design?.labelText?.tracking}
-  ${specs.design?.labelText?.weight}
-  
-  ${specs.layout?.height}
-  ${specs.layout?.paddingRightLeft}
-  ${specs.layout?.paddingLeftWithIcon}
-  ${specs.layout?.paddingRightWithIcon}
-  ${specs.layout?.paddingBetweenElement}
-  ${specs.layout?.shape}
-  ${specs.layout?.labelTextAlignment}
- 
-  disabled:bg-on-surface-light/[.12]
-  dark:disabled:bg-on-surface-dark/[.12]
-  disabled:text-on-surface-light/[.38]
-  dark:disabled:text-on-surface-dark/[.38]
+  <button data-element="container" :class="tw(`
+  ${variant === 'filled' ? filled.container : filled.container}
   `)">
-    <span v-if="startIcon" :class="tw(`
-    ${specs.layout?.iconSize}
-    ${specs.design?.icon?.color}
-    `)">{{ startIcon }}</span>
-    <slot />
-    <span v-if="endIcon" :class="tw(`
-    ${specs.layout?.iconSize}
-    ${specs.design?.icon?.color}
-    `)">{{ endIcon }}</span>
+    <span v-if="startIcon" data-element="icon" :class="tw(`
+    ${variant === 'filled' ? filled.icon : filled.icon}
+    `)">
+      {{ startIcon }}
+    </span>
+    <span data-element="label-text" :class="tw(`
+    ${variant === 'filled' ? filled.labelText : filled.labelText}
+    `)">
+      <slot />
+    </span>
+    <span v-if="endIcon" data-element="icon" :class="tw(`
+    ${variant === 'filled' ? filled.icon : filled.icon}
+    `)">
+      {{ endIcon }}
+    </span>
   </button>
 </template>
