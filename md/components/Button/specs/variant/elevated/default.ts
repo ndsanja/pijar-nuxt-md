@@ -1,4 +1,4 @@
-import { FilledButtonSpecsType } from '../../../types/ButtonSpecsType';
+import { ElevatedButtonSpecsType } from '../../../types/ButtonSpecsType';
 
 type Props = {
   variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated';
@@ -8,9 +8,9 @@ type Props = {
   endIcon?: any;
 };
 
-export const defaultButtonFilledSpecs = (props: Props) => {
+export const defaultButtonElevatedSpecs = (props: Props) => {
   const { color, endIcon, size, startIcon, variant } = props;
-  const defaultButtonFilled: FilledButtonSpecsType = {
+  const defaultButtonElevated: ElevatedButtonSpecsType = {
     container: tw(`
     inline-flex
     items-center
@@ -21,8 +21,8 @@ export const defaultButtonFilledSpecs = (props: Props) => {
     ${endIcon ? 'pr-4' : ''}
     space-x-2
     rounded-full
-    shadow-elevation-0-light dark:shadow-elevation-0-light
-    shadow-shadow-light dark:shadow-shadow-light
+    shadow-elevation-1-light dark:shadow-elevation-1-dark
+    shadow-shadow-light/[.20] dark:shadow-shadow-dark/[.20]
     ${
       color === 'primary'
         ? 'bg-primary-light dark:bg-primary-dark'
@@ -32,18 +32,19 @@ export const defaultButtonFilledSpecs = (props: Props) => {
         ? 'bg-tertiary-light dark:bg-tertiary-dark'
         : color === 'error'
         ? 'bg-error-light dark:bg-error-dark'
-        : 'bg-primary-light dark:bg-primary-dark'
+        : 'bg-surface-light dark:bg-surface-dark'
     }
+    bg-surface-light dark:bg-surface-dark
     disabled:bg-on-surface-light/[.12]
     !disabled:text-on-surface-light/[.38]
     disabled:shadow-shadow-elevation-0
     disabled:cursor-not-allowed
     hover:opacity-90
-    hover:shadow-elevation-1-light dark:hover:shadow-elevation-1-dark
+    hover:shadow-elevation-2-light dark:hover:shadow-elevation-2-dark
     focus:opacity-80
-    focus:shadow-elevation-0-light dark:focus:shadow-elevation-0-dark
+    focus:shadow-elevation-1-light dark:focus:shadow-elevation-1-dark
     active:opacity-70
-    active:shadow-elevation-0-light dark:active:shadow-elevation-0-dark
+    active:shadow-elevation-1-light dark:active:shadow-elevation-1-dark
     `),
 
     labelText: tw(`
@@ -63,8 +64,9 @@ export const defaultButtonFilledSpecs = (props: Props) => {
         ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
         : color === 'error'
         ? 'text-on-error-light dark:text-on-error-dark'
-        : 'text-on-primary-light dark:text-on-primary-dark'
+        : 'text-primary-light dark:text-primary-dark'
     }
+    text-primary-light dark:text-primary-dark
     !disabled:text-on-surface-light/[.38]
     `),
 
@@ -79,11 +81,12 @@ export const defaultButtonFilledSpecs = (props: Props) => {
         ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
         : color === 'error'
         ? 'text-on-error-light dark:text-on-error-dark'
-        : 'text-on-primary-light dark:text-on-primary-dark'
+        : 'text-primary-light dark:text-primary-dark'
     }
+    text-primary-light dark:text-primary-dark
     !disabled:text-on-surface-light/[.38]
     `),
   };
 
-  return defaultButtonFilled;
+  return defaultButtonElevated;
 };

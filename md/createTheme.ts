@@ -3,7 +3,32 @@ export const createTheme = () => {
     components: {
       button: {
         variant: {
+          base: {
+            container: '',
+            labelText: '',
+            icon: '',
+          },
           filled: {
+            container: '',
+            labelText: '',
+            icon: '',
+          },
+          elevated: {
+            container: '',
+            labelText: '',
+            icon: '',
+          },
+          tonal: {
+            container: '',
+            labelText: '',
+            icon: '',
+          },
+          outlined: {
+            container: '',
+            labelText: '',
+            icon: '',
+          },
+          text: {
             container: '',
             labelText: '',
             icon: '',

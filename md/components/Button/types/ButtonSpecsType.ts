@@ -29,3 +29,9 @@ export type FilledButtonSpecsType = {
   labelText?: string;
   icon?: string;
 };
+
+export type ElevatedButtonSpecsType = {
+  container?: string;
+  labelText?: string;
+  icon?: string;
+};
