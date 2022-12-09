@@ -11,8 +11,7 @@ export interface ButtonSpecsLayout {
   height?: string;
   shape?: string;
   iconSize?: string;
-  paddingLeft?: string;
-  paddingRight?: string;
+  paddingRightLeft?: string;
   paddingLeftWithIcon?: string;
   paddingRightWithIcon?: string;
   paddingBetweenElement?: string;

@@ -1,15 +1,21 @@
-import { ButtonSpecs } from './buttonSpecsType';
+import { ButtonSpecs } from '../types/buttonSpecsType';
 
-type Color = 'primary' | 'secondary' | 'tertiary' | 'error' | undefined;
+type Props = {
+  variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated';
+  size?: 'small' | 'medium' | 'large' | 'extra-large';
+  color?: 'primary' | 'secondary' | 'tertiary' | 'error';
+  startIcon?: any;
+  endIcon?: any;
+};
 
-export const buttonSpecs = (startIcon: any, endIcon: any, color: Color) => {
+export const defaultButtonSpecs = (props: Props) => {
+  const { color, endIcon, startIcon, size, variant } = props;
   const buttonSpecs: ButtonSpecs = {
     //LAYOUT
     layout: {
       height: 'h-10',
-      paddingLeft: startIcon ? '' : 'pl-6',
+      paddingRightLeft: startIcon ? 'pr-6' : endIcon ? 'pl-6' : 'px-6',
       paddingLeftWithIcon: startIcon ? 'pl-4' : '',
-      paddingRight: endIcon ? '' : 'pr-6',
       paddingRightWithIcon: endIcon ? 'pr-4' : '',
       paddingBetweenElement: 'space-x-2',
       shape: 'rounded-full',

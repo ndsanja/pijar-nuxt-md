@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ButtonSpecs } from '~~/md/components/Button/buttonSpecsType'
-import { buttonSpecs } from '~~/md/components/Button/buttonSpecs'
+import { ButtonSpecs } from '~~/md/components/Button/types/buttonSpecsType'
+import { buttonSpecs } from '~~/md/components/Button/specs'
+import { defaultButtonSpecs } from './specs/default';
+import { overrideButtonSpecs } from './specs/override';
 
 type Props = {
   variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated'
@@ -11,13 +13,20 @@ type Props = {
   specs?: ButtonSpecs
 }
 
-const { variant, size, color, startIcon, endIcon, specs: specsProps } = withDefaults(defineProps<Props>(), {
+const { variant, size, color, startIcon, endIcon, specs: propsButtonSpecs } = withDefaults(defineProps<Props>(), {
   variant: 'filled',
   color: 'primary',
   size: 'medium'
 })
 
-const specs = buttonSpecs(startIcon, endIcon, color)
+const defaultSpecs = defaultButtonSpecs({ color, endIcon, size, startIcon, variant })
+const overrideSpecs = overrideButtonSpecs({ color, endIcon, size, startIcon, variant })
+
+const specs = buttonSpecs({
+  default: defaultSpecs,
+  override: overrideSpecs,
+  props: propsButtonSpecs
+})
 </script>
 
 <template>
@@ -37,34 +46,13 @@ const specs = buttonSpecs(startIcon, endIcon, color)
   ${specs.design?.labelText?.weight}
   
   ${specs.layout?.height}
-  ${specs.layout?.paddingLeft}
-  ${specs.layout?.paddingRight}
+  ${specs.layout?.paddingRightLeft}
   ${specs.layout?.paddingLeftWithIcon}
   ${specs.layout?.paddingRightWithIcon}
   ${specs.layout?.paddingBetweenElement}
   ${specs.layout?.shape}
   ${specs.layout?.labelTextAlignment}
-  
-  ${specsProps?.design?.container?.color}
-  ${specsProps?.design?.container?.elevation}
-  ${specsProps?.design?.container?.shadowColor}
-  
-  ${specsProps?.design?.labelText?.color}
-  ${specsProps?.design?.labelText?.font}
-  ${specsProps?.design?.labelText?.lineHeight}
-  ${specsProps?.design?.labelText?.size}
-  ${specsProps?.design?.labelText?.tracking}
-  ${specsProps?.design?.labelText?.weight}
-  
-  ${specsProps?.layout?.height}
-  ${specsProps?.layout?.paddingLeft}
-  ${specsProps?.layout?.paddingRight}
-  ${specsProps?.layout?.paddingLeftWithIcon}
-  ${specsProps?.layout?.paddingRightWithIcon}
-  ${specsProps?.layout?.paddingBetweenElement}
-  ${specsProps?.layout?.shape}
-  ${specsProps?.layout?.labelTextAlignment}
-  
+ 
   disabled:bg-on-surface-light/[.12]
   dark:disabled:bg-on-surface-dark/[.12]
   disabled:text-on-surface-light/[.38]
@@ -72,16 +60,12 @@ const specs = buttonSpecs(startIcon, endIcon, color)
   `)">
     <span v-if="startIcon" :class="tw(`
     ${specs.layout?.iconSize}
-    ${specsProps?.layout?.iconSize}
     ${specs.design?.icon?.color}
-    ${specsProps?.design?.icon?.color}
     `)">{{ startIcon }}</span>
     <slot />
     <span v-if="endIcon" :class="tw(`
     ${specs.layout?.iconSize}
-    ${specsProps?.layout?.iconSize}
     ${specs.design?.icon?.color}
-    ${specsProps?.design?.icon?.color}
     `)">{{ endIcon }}</span>
   </button>
 </template>
