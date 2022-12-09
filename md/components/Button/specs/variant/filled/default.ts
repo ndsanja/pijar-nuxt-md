@@ -12,6 +12,9 @@ export const defaultButtonFilledSpecs = (props: Props) => {
   const { color, endIcon, size, startIcon, variant } = props;
   const defaultButtonFilled: FilledButtonSpecsType = {
     container: tw(`
+    group/container
+    relative
+    overflow-hidden
     inline-flex
     items-center
     justify-center
@@ -34,15 +37,15 @@ export const defaultButtonFilledSpecs = (props: Props) => {
         ? 'bg-error-light dark:bg-error-dark'
         : 'bg-primary-light dark:bg-primary-dark'
     }
+    after:inset-0
     disabled:bg-on-surface-light/[.12]
-    !disabled:text-on-surface-light/[.38]
     disabled:shadow-shadow-elevation-0
     disabled:cursor-not-allowed
-    hover:opacity-90
+    hover:after:absolute hover:after:bg-on-primary-light dark:hover:after:bg-on-primary-dark hover:after:opacity-[0.08]
     hover:shadow-elevation-1-light dark:hover:shadow-elevation-1-dark
-    focus:opacity-80
+    focus:after:absolute focus:after:bg-on-primary-light dark:focus:after:bg-on-primary-dark focus:after:opacity-[0.12]
     focus:shadow-elevation-0-light dark:focus:shadow-elevation-0-dark
-    active:opacity-70
+    active:after:absolute active:after:bg-on-primary-light dark:active:after:bg-on-primary-dark active:after:opacity-[0.22]
     active:shadow-elevation-0-light dark:active:shadow-elevation-0-dark
     `),
 
@@ -65,7 +68,7 @@ export const defaultButtonFilledSpecs = (props: Props) => {
         ? 'text-on-error-light dark:text-on-error-dark'
         : 'text-on-primary-light dark:text-on-primary-dark'
     }
-    !disabled:text-on-surface-light/[.38]
+    group-disabled/container:text-on-surface-light/[.38]
     `),
 
     icon: tw(`
@@ -81,7 +84,7 @@ export const defaultButtonFilledSpecs = (props: Props) => {
         ? 'text-on-error-light dark:text-on-error-dark'
         : 'text-on-primary-light dark:text-on-primary-dark'
     }
-    !disabled:text-on-surface-light/[.38]
+     group-disabled/container:text-on-surface-light/[.38]
     `),
   };
 

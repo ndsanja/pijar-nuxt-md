@@ -4,10 +4,10 @@ import { Button } from '~~/md';
 
 <template>
   <div class="flex items-center justify-center space-x-4 py-10">
-    <Button start-icon="+" variant="elevated">
+    <Button start-icon="+" variant="elevated" disabled>
       <p>Hello</p>
     </Button>
-    <Button start-icon="+" variant="filled">
+    <Button start-icon="+" variant="filled" color="error">
       <p>Hello</p>
     </Button>
     <Button start-icon="+">

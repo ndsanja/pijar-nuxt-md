@@ -12,6 +12,9 @@ export const defaultButtonElevatedSpecs = (props: Props) => {
   const { color, endIcon, size, startIcon, variant } = props;
   const defaultButtonElevated: ElevatedButtonSpecsType = {
     container: tw(`
+    group/container
+    relative
+    overflow-hidden
     inline-flex
     items-center
     justify-center
@@ -35,20 +38,19 @@ export const defaultButtonElevatedSpecs = (props: Props) => {
         : 'bg-surface-light dark:bg-surface-dark'
     }
     bg-surface-light dark:bg-surface-dark
+    after:absolute after:inset-0 after:bg-surface-tint-light dark:after:bg-surface-tint-dark after:opacity-5
     disabled:bg-on-surface-light/[.12]
-    !disabled:text-on-surface-light/[.38]
     disabled:shadow-shadow-elevation-0
     disabled:cursor-not-allowed
-    hover:opacity-90
+    hover:after:opacity-[.08]
     hover:shadow-elevation-2-light dark:hover:shadow-elevation-2-dark
-    focus:opacity-80
+    focus:after:opacity-[.12]
     focus:shadow-elevation-1-light dark:focus:shadow-elevation-1-dark
-    active:opacity-70
+    active:bg-secondary-container-light dark:active:bg-secondary-container-dark
     active:shadow-elevation-1-light dark:active:shadow-elevation-1-dark
     `),
 
     labelText: tw(`
-    group/container
     text-center
     font-brand
     text-label-large
@@ -67,7 +69,8 @@ export const defaultButtonElevatedSpecs = (props: Props) => {
         : 'text-primary-light dark:text-primary-dark'
     }
     text-primary-light dark:text-primary-dark
-    !disabled:text-on-surface-light/[.38]
+    group-disabled/container:text-on-surface-light/[.38]
+    group-active/container:text-on-secondary-container-light dark:group-active/container:text-on-secondary-container-dark
     `),
 
     icon: tw(`
@@ -84,7 +87,8 @@ export const defaultButtonElevatedSpecs = (props: Props) => {
         : 'text-primary-light dark:text-primary-dark'
     }
     text-primary-light dark:text-primary-dark
-    !disabled:text-on-surface-light/[.38]
+    group-disabled/container:text-on-surface-light/[.38]
+    group-active/container:text-on-secondary-container-light dark:group-active/container:text-on-secondary-container-dark
     `),
   };
 
