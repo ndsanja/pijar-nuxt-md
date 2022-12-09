@@ -30,7 +30,7 @@ export const buttonSpecs = (startIcon: any, endIcon: any, color: Color) => {
             : color === 'error'
             ? 'bg-error-light dark:bg-error-dark'
             : 'bg-primary-light dark:bg-primary-dark',
-        elevation: 'drop-shadow-elevation-0',
+        elevation: 'shadow-elevation-0-light dark:shadow-elevation-0-light',
         shadowColor: 'shadow-shadow-light dark:shadow-shadow-light',
       },
 

@@ -4,8 +4,9 @@ import { Button } from '~~/md'
 
 <template>
   <div class="flex items-center justify-center space-x-4 py-10">
-    <Button start-icon="+" class="drop-shadow-elevation-1">
+    <Button start-icon="+">
       <p>Hello</p>
     </Button>
+
   </div>
 </template>

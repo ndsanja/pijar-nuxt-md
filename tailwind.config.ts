@@ -1,8 +1,8 @@
 import type { Config } from 'tailwindcss';
+// import { themeColors } from './md/styles/colors';
 import { themeColors } from './utils/md/theme';
-import { typography } from './md/themes/typography';
-import { token } from './md/tokens/tokens';
-import { elevation } from './md/themes/elevation';
+import { typography } from './md/styles/typography';
+import { elevation } from './md/styles/elevation';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const colorsMode = themeColors(true).md.sys.color;
@@ -108,10 +108,10 @@ export default <Partial<Config>>(<unknown>{
           primary: {
             light: colorsMode.on.primary.light,
             dark: colorsMode.on.primary.dark,
-            container: {
-              light: token.md.ref.palette.primary[10],
-              dark: token.md.ref.palette.primary[90],
-            },
+            // container: {
+            //   light: colorsMode.on.primary.container.light,
+            //   dark: colorsMode.on.primary.container.dark,
+            // },
           },
           secondary: {
             light: colorsMode.on.secondary.light,
@@ -247,13 +247,19 @@ export default <Partial<Config>>(<unknown>{
         'title-medium': typography.md.sys.typescale.title.medium.tracking,
         'title-small': typography.md.sys.typescale.title.small.tracking,
       },
-      dropShadow: {
-        'elevation-0': elevation.md.sys.elevation.level[0],
-        'elevation-1': elevation.md.sys.elevation.level[1],
-        'elevation-2': elevation.md.sys.elevation.level[2],
-        'elevation-3': elevation.md.sys.elevation.level[3],
-        'elevation-4': elevation.md.sys.elevation.level[4],
-        'elevation-5': elevation.md.sys.elevation.level[5],
+      boxShadow: {
+        'elevation-0-light': elevation.md.sys.elevation.level[0].light,
+        'elevation-1-light': elevation.md.sys.elevation.level[1].light,
+        'elevation-2-light': elevation.md.sys.elevation.level[2].light,
+        'elevation-3-light': elevation.md.sys.elevation.level[3].light,
+        'elevation-4-light': elevation.md.sys.elevation.level[4].light,
+        'elevation-5-light': elevation.md.sys.elevation.level[5].light,
+        'elevation-0-dark': elevation.md.sys.elevation.level[0].dark,
+        'elevation-1-dark': elevation.md.sys.elevation.level[1].dark,
+        'elevation-2-dark': elevation.md.sys.elevation.level[2].dark,
+        'elevation-3-dark': elevation.md.sys.elevation.level[3].dark,
+        'elevation-4-dark': elevation.md.sys.elevation.level[4].dark,
+        'elevation-5-dark': elevation.md.sys.elevation.level[5].dark,
       },
     },
   },
