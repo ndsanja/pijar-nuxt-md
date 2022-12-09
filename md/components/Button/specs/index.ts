@@ -109,6 +109,150 @@ export const buttonSpecs = (specs: Specs) => {
           : specs.default?.design?.icon?.color,
       },
     },
+    state: {
+      disabled: {
+        container: {
+          color: specs.override?.state?.disabled?.container?.color
+            ? specs.override?.state?.disabled?.container?.color
+            : specs.props?.state?.disabled?.container?.color
+            ? specs.props?.state?.disabled?.container?.color
+            : specs.default?.state?.disabled?.container?.color,
+          elevation: specs.override?.state?.disabled?.container?.elevation
+            ? specs.override?.state?.disabled?.container?.elevation
+            : specs.props?.state?.disabled?.container?.elevation
+            ? specs.props?.state?.disabled?.container?.elevation
+            : specs.default?.state?.disabled?.container?.elevation,
+          opacity: specs.override?.state?.disabled?.container?.opacity
+            ? specs.override?.state?.disabled?.container?.opacity
+            : specs.props?.state?.disabled?.container?.opacity
+            ? specs.props?.state?.disabled?.container?.opacity
+            : specs.default?.state?.disabled?.container?.opacity,
+        },
+        labelText: {
+          color: specs.override?.state?.disabled?.labelText?.color
+            ? specs.override?.state?.disabled?.labelText?.color
+            : specs.props?.state?.disabled?.labelText?.color
+            ? specs.props?.state?.disabled?.labelText?.color
+            : specs.default?.state?.disabled?.labelText?.color,
+          opacity: specs.override?.state?.disabled?.labelText?.opacity
+            ? specs.override?.state?.disabled?.labelText?.opacity
+            : specs.props?.state?.disabled?.labelText?.opacity
+            ? specs.props?.state?.disabled?.labelText?.opacity
+            : specs.default?.state?.disabled?.labelText?.opacity,
+        },
+        icon: {
+          color: specs.override?.state?.disabled?.icon?.color
+            ? specs.override?.state?.disabled?.icon?.color
+            : specs.props?.state?.disabled?.icon?.color
+            ? specs.props?.state?.disabled?.icon?.color
+            : specs.default?.state?.disabled?.icon?.color,
+          opacity: specs.override?.state?.disabled?.icon?.opacity
+            ? specs.override?.state?.disabled?.icon?.opacity
+            : specs.props?.state?.disabled?.icon?.opacity
+            ? specs.props?.state?.disabled?.icon?.opacity
+            : specs.default?.state?.disabled?.icon?.opacity,
+        },
+      },
+      hovered: {
+        container: {
+          color: specs.override?.state?.hovered?.container?.color
+            ? specs.override?.state?.hovered?.container?.color
+            : specs.props?.state?.hovered?.container?.color
+            ? specs.props?.state?.hovered?.container?.color
+            : specs.default?.state?.hovered?.container?.color,
+          elevation: specs.override?.state?.hovered?.container?.elevation
+            ? specs.override?.state?.hovered?.container?.elevation
+            : specs.props?.state?.hovered?.container?.elevation
+            ? specs.props?.state?.hovered?.container?.elevation
+            : specs.default?.state?.hovered?.container?.elevation,
+          opacity: specs.override?.state?.hovered?.container?.opacity
+            ? specs.override?.state?.hovered?.container?.opacity
+            : specs.props?.state?.hovered?.container?.opacity
+            ? specs.props?.state?.hovered?.container?.opacity
+            : specs.default?.state?.hovered?.container?.opacity,
+        },
+        labelText: {
+          color: specs.override?.state?.hovered?.labelText?.color
+            ? specs.override?.state?.hovered?.labelText?.color
+            : specs.props?.state?.hovered?.labelText?.color
+            ? specs.props?.state?.hovered?.labelText?.color
+            : specs.default?.state?.hovered?.labelText?.color,
+        },
+        icon: {
+          color: specs.override?.state?.hovered?.icon?.color
+            ? specs.override?.state?.hovered?.icon?.color
+            : specs.props?.state?.hovered?.icon?.color
+            ? specs.props?.state?.hovered?.icon?.color
+            : specs.default?.state?.hovered?.icon?.color,
+        },
+      },
+      focused: {
+        container: {
+          color: specs.override?.state?.focused?.container?.color
+            ? specs.override?.state?.focused?.container?.color
+            : specs.props?.state?.focused?.container?.color
+            ? specs.props?.state?.focused?.container?.color
+            : specs.default?.state?.focused?.container?.color,
+          elevation: specs.override?.state?.focused?.container?.elevation
+            ? specs.override?.state?.focused?.container?.elevation
+            : specs.props?.state?.focused?.container?.elevation
+            ? specs.props?.state?.focused?.container?.elevation
+            : specs.default?.state?.focused?.container?.elevation,
+          opacity: specs.override?.state?.focused?.container?.opacity
+            ? specs.override?.state?.focused?.container?.opacity
+            : specs.props?.state?.focused?.container?.opacity
+            ? specs.props?.state?.focused?.container?.opacity
+            : specs.default?.state?.focused?.container?.opacity,
+        },
+        labelText: {
+          color: specs.override?.state?.focused?.labelText?.color
+            ? specs.override?.state?.focused?.labelText?.color
+            : specs.props?.state?.focused?.labelText?.color
+            ? specs.props?.state?.focused?.labelText?.color
+            : specs.default?.state?.focused?.labelText?.color,
+        },
+        icon: {
+          color: specs.override?.state?.focused?.icon?.color
+            ? specs.override?.state?.focused?.icon?.color
+            : specs.props?.state?.focused?.icon?.color
+            ? specs.props?.state?.focused?.icon?.color
+            : specs.default?.state?.focused?.icon?.color,
+        },
+      },
+      pressed: {
+        container: {
+          color: specs.override?.state?.pressed?.container?.color
+            ? specs.override?.state?.pressed?.container?.color
+            : specs.props?.state?.pressed?.container?.color
+            ? specs.props?.state?.pressed?.container?.color
+            : specs.default?.state?.pressed?.container?.color,
+          elevation: specs.override?.state?.pressed?.container?.elevation
+            ? specs.override?.state?.pressed?.container?.elevation
+            : specs.props?.state?.pressed?.container?.elevation
+            ? specs.props?.state?.pressed?.container?.elevation
+            : specs.default?.state?.pressed?.container?.elevation,
+          opacity: specs.override?.state?.pressed?.container?.opacity
+            ? specs.override?.state?.pressed?.container?.opacity
+            : specs.props?.state?.pressed?.container?.opacity
+            ? specs.props?.state?.pressed?.container?.opacity
+            : specs.default?.state?.pressed?.container?.opacity,
+        },
+        labelText: {
+          color: specs.override?.state?.pressed?.labelText?.color
+            ? specs.override?.state?.pressed?.labelText?.color
+            : specs.props?.state?.pressed?.labelText?.color
+            ? specs.props?.state?.pressed?.labelText?.color
+            : specs.default?.state?.pressed?.labelText?.color,
+        },
+        icon: {
+          color: specs.override?.state?.pressed?.icon?.color
+            ? specs.override?.state?.pressed?.icon?.color
+            : specs.props?.state?.pressed?.icon?.color
+            ? specs.props?.state?.pressed?.icon?.color
+            : specs.default?.state?.pressed?.icon?.color,
+        },
+      },
+    },
   };
 
   return buttonSpecs;
