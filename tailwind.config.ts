@@ -261,6 +261,12 @@ export default <Partial<Config>>(<unknown>{
         'elevation-4-dark': elevation.md.sys.elevation.level[4].dark,
         'elevation-5-dark': elevation.md.sys.elevation.level[5].dark,
       },
+      opacity: {
+        'state-hover': '.08',
+        'state-focus': '.12',
+        'state-pressed': '.12',
+        'state-dragged': '.16',
+      },
     },
   },
 });

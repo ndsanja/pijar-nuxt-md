@@ -1,21 +1,16 @@
-import { FilledButtonSpecsType } from '../../../types/ButtonSpecsType';
-import { defaultButtonFilledSpecs } from './default';
+import { createTheme } from '~~/md/createTheme';
+import { FilledButtonSpecsType, ButtonPropsType } from '../../../types';
+import { defaultButtonFilledSpecs } from './defaultFilled';
 
-type Props = {
-  variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated';
-  size?: 'small' | 'medium' | 'large' | 'extra-large';
-  color?: 'primary' | 'secondary' | 'tertiary' | 'error';
-  startIcon?: any;
-  endIcon?: any;
-};
+const theme = createTheme();
+const overrideSpecs = theme.components.button.variant.filled;
 
 type Specs = {
-  override?: FilledButtonSpecsType;
   props?: FilledButtonSpecsType;
 };
 
-export const buttonFilledSpecs = (specs: Specs, props: Props) => {
-  const { color, endIcon, startIcon, size, variant } = props;
+export const buttonFilledSpecs = (specs: Specs, props: ButtonPropsType) => {
+  const { color, endIcon, startIcon, size, variant, active } = props;
   const defaultSpecs = defaultButtonFilledSpecs({
     color,
     endIcon,
@@ -26,17 +21,17 @@ export const buttonFilledSpecs = (specs: Specs, props: Props) => {
   const buttonFilledSpecs: FilledButtonSpecsType = {
     container: tw(`
       ${defaultSpecs.container}
-      ${specs.override?.container}
+      ${overrideSpecs?.container}
       ${specs.props?.container}
       `),
     labelText: tw(`
       ${defaultSpecs.labelText}
-      ${specs.override?.labelText}
+      ${overrideSpecs?.labelText}
       ${specs.props?.labelText}
       `),
     icon: tw(`
       ${defaultSpecs.icon}
-      ${specs.override?.icon}
+      ${overrideSpecs?.icon}
       ${specs.props?.icon}
       `),
   };

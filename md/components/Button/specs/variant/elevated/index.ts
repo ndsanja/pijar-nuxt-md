@@ -1,21 +1,16 @@
-import { ElevatedButtonSpecsType } from '../../../types/ButtonSpecsType';
-import { defaultButtonElevatedSpecs } from './default';
+import { createTheme } from '~~/md/createTheme';
+import { ElevatedButtonSpecsType, ButtonPropsType } from '../../../types';
+import { defaultButtonElevatedSpecs } from './defaultElevated';
 
-type Props = {
-  variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated';
-  size?: 'small' | 'medium' | 'large' | 'extra-large';
-  color?: 'primary' | 'secondary' | 'tertiary' | 'error';
-  startIcon?: any;
-  endIcon?: any;
-};
+const theme = createTheme();
+const overrideSpecs = theme.components.button.variant.elevated;
 
 type Specs = {
-  override?: ElevatedButtonSpecsType;
   props?: ElevatedButtonSpecsType;
 };
 
-export const buttonElevatedSpecs = (specs: Specs, props: Props) => {
-  const { color, endIcon, startIcon, size, variant } = props;
+export const buttonElevatedSpecs = (specs: Specs, props: ButtonPropsType) => {
+  const { color, endIcon, startIcon, size, variant, active } = props;
   const defaultSpecs = defaultButtonElevatedSpecs({
     color,
     endIcon,
@@ -26,17 +21,17 @@ export const buttonElevatedSpecs = (specs: Specs, props: Props) => {
   const buttonElevatedSpecs: ElevatedButtonSpecsType = {
     container: tw(`
       ${defaultSpecs.container}
-      ${specs.override?.container}
+      ${overrideSpecs?.container}
       ${specs.props?.container}
       `),
     labelText: tw(`
       ${defaultSpecs.labelText}
-      ${specs.override?.labelText}
+      ${overrideSpecs?.labelText}
       ${specs.props?.labelText}
       `),
     icon: tw(`
       ${defaultSpecs.icon}
-      ${specs.override?.icon}
+      ${overrideSpecs?.icon}
       ${specs.props?.icon}
       `),
   };
