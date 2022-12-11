@@ -11,23 +11,23 @@ export type Props = {
   startIcon?: any;
   endIcon?: any;
   active?: boolean;
+  loading?: boolean
   specs?: ButtonSpecsType;
 };
 
-const { color, endIcon, size, startIcon, variant, specs: propsSpecs, active } = withDefaults(defineProps<Props>(), {
+const { color, endIcon, size, startIcon, variant, specs: propsSpecs, active, loading } = withDefaults(defineProps<Props>(), {
   variant: 'filled',
   color: 'primary',
   size: 'medium',
-  active: true
 })
 
 const filled = buttonFilledSpecs({
   props: propsSpecs?.variant?.filled
-}, { color, endIcon, size, startIcon, variant, active })
+}, { color, endIcon, size, startIcon, variant, active, loading })
 
 const elevated = buttonElevatedSpecs({
   props: propsSpecs?.variant?.elevated
-}, { color, endIcon, size, startIcon, variant, active })
+}, { color, endIcon, size, startIcon, variant, active, loading })
 
 
 </script>

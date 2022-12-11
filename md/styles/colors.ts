@@ -1,4 +1,4 @@
-import { token } from '~~/mds/tokens/tokens';
+import { token } from '../tokens/tokens';
 
 const color = token.md.ref.palette;
 

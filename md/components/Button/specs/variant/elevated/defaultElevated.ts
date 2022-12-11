@@ -1,7 +1,7 @@
 import { ElevatedButtonSpecsType, ButtonPropsType } from '../../../types';
 
 export const defaultButtonElevatedSpecs = (props: ButtonPropsType) => {
-  const { color, endIcon, size, startIcon, variant, active } = props;
+  const { color, endIcon, size, startIcon, variant, active, loading } = props;
   const defaultButtonElevated: ElevatedButtonSpecsType = {
     container: tw(`
     group/container
@@ -19,18 +19,17 @@ export const defaultButtonElevatedSpecs = (props: ButtonPropsType) => {
     shadow-elevation-1-light dark:shadow-elevation-1-dark
     shadow-shadow-light/[.20] dark:shadow-shadow-dark/[.20]
     bg-surface-light dark:bg-surface-dark
+    after:absolute after:inset-0 after:bg-surface-tint-light dark:after:bg-surface-tint-dark after:opacity-5
     ${
-      color === 'primary'
-        ? 'bg-primary-light dark:bg-primary-dark'
-        : color === 'secondary'
-        ? 'bg-secondary-light dark:bg-secondary-dark'
-        : color === 'tertiary'
-        ? 'bg-tertiary-light dark:bg-tertiary-dark'
-        : color === 'error'
-        ? 'bg-error-light dark:bg-error-dark'
+      active
+        ? 'bg-secondary-container-light dark:bg-secondary-container-dark after:inset-0'
         : ''
     }
-    after:absolute after:inset-0 after:bg-surface-tint-light dark:after:bg-surface-tint-dark after:opacity-5
+    ${
+      loading
+        ? 'bg-on-surface-light/[.12] shadow-shadow-elevation-0 cursor-not-allowed'
+        : ''
+    }
     disabled:bg-on-surface-light/[.12]
     disabled:shadow-shadow-elevation-0
     disabled:cursor-not-allowed
@@ -51,14 +50,13 @@ export const defaultButtonElevatedSpecs = (props: ButtonPropsType) => {
     font-label-large
     text-primary-light dark:text-primary-dark
     ${
-      color === 'primary'
-        ? 'text-on-primary-light dark:text-on-primary-dark'
-        : color === 'secondary'
-        ? 'text-on-secondary-light dark:text-on-secondary-dark'
-        : color === 'tertiary'
-        ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
-        : color === 'error'
-        ? 'text-on-error-light dark:text-on-error-dark'
+      active
+        ? 'text-on-secondary-container-light dark:text-on-secondary-container-dark'
+        : ''
+    }
+    ${
+      loading
+        ? 'text-on-surface-light/[.38] shadow-shadow-elevation-0 cursor-not-allowed'
         : ''
     }
     group-disabled/container:text-on-surface-light/[.38]
@@ -68,14 +66,13 @@ export const defaultButtonElevatedSpecs = (props: ButtonPropsType) => {
     text-lg
     text-primary-light dark:text-primary-dark
     ${
-      color === 'primary'
-        ? 'text-on-primary-light dark:text-on-primary-dark'
-        : color === 'secondary'
-        ? 'text-on-secondary-light dark:text-on-secondary-dark'
-        : color === 'tertiary'
-        ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
-        : color === 'error'
-        ? 'text-on-error-light dark:text-on-error-dark'
+      active
+        ? 'text-on-secondary-container-light dark:text-on-secondary-container-dark'
+        : ''
+    }
+    ${
+      loading
+        ? 'text-on-surface-light/[.38] shadow-shadow-elevation-0 cursor-not-allowed'
         : ''
     }
     group-disabled/container:text-on-surface-light/[.38]

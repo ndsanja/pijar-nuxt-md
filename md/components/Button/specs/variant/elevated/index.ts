@@ -10,13 +10,15 @@ type Specs = {
 };
 
 export const buttonElevatedSpecs = (specs: Specs, props: ButtonPropsType) => {
-  const { color, endIcon, startIcon, size, variant, active } = props;
+  const { color, endIcon, startIcon, size, variant, active, loading } = props;
   const defaultSpecs = defaultButtonElevatedSpecs({
     color,
     endIcon,
     size,
     startIcon,
     variant,
+    active,
+    loading,
   });
   const buttonElevatedSpecs: ElevatedButtonSpecsType = {
     container: tw(`

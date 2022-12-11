@@ -10,13 +10,15 @@ type Specs = {
 };
 
 export const buttonFilledSpecs = (specs: Specs, props: ButtonPropsType) => {
-  const { color, endIcon, startIcon, size, variant, active } = props;
+  const { color, endIcon, startIcon, size, variant, active, loading } = props;
   const defaultSpecs = defaultButtonFilledSpecs({
     color,
     endIcon,
     size,
     startIcon,
     variant,
+    active,
+    loading,
   });
   const buttonFilledSpecs: FilledButtonSpecsType = {
     container: tw(`

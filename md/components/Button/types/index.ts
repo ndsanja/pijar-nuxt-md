@@ -5,6 +5,7 @@ export type ButtonPropsType = {
   startIcon?: any;
   endIcon?: any;
   active?: boolean;
+  loading?: boolean;
   specs?: ButtonSpecsType;
 };
 

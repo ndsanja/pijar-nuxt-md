@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
-// import { themeColors } from './md/styles/colors';
-import { themeColors } from './utils/md/theme';
+import { token } from './md/tokens/tokens';
+import { themeColors } from './md/styles/colors';
 import { typography } from './md/styles/typography';
 import { elevation } from './md/styles/elevation';
 const defaultTheme = require('tailwindcss/defaultTheme');
@@ -108,10 +108,10 @@ export default <Partial<Config>>(<unknown>{
           primary: {
             light: colorsMode.on.primary.light,
             dark: colorsMode.on.primary.dark,
-            // container: {
-            //   light: colorsMode.on.primary.container.light,
-            //   dark: colorsMode.on.primary.container.dark,
-            // },
+            container: {
+              light: colorsMode.on.primary.container.light,
+              dark: colorsMode.on.primary.container.dark,
+            },
           },
           secondary: {
             light: colorsMode.on.secondary.light,

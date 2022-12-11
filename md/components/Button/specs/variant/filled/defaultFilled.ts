@@ -1,7 +1,7 @@
 import { FilledButtonSpecsType, ButtonPropsType } from '../../../types';
 
 export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
-  const { color, endIcon, size, startIcon, variant, active } = props;
+  const { color, endIcon, size, startIcon, variant, active, loading } = props;
   const defaultButtonFilled: FilledButtonSpecsType = {
     container: tw(`
     group/container
@@ -18,19 +18,43 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     rounded-full
     shadow-elevation-0-light dark:shadow-elevation-0-light
     shadow-shadow-light dark:shadow-shadow-light
-    bg-primary-light dark:bg-primary-dark  
+    bg-primary-light dark:bg-primary-dark
+     ${
+       active ? 'bg-primary-container-light dark:bg-primary-container-dark' : ''
+     }
     ${
       color === 'primary'
-        ? 'bg-primary-light dark:bg-primary-dark'
+        ? `bg-primary-light dark:bg-primary-dark ${
+            active
+              ? 'bg-primary-container-light dark:bg-primary-container-dark'
+              : ''
+          }`
         : color === 'secondary'
-        ? 'bg-secondary-light dark:bg-secondary-dark'
+        ? `bg-secondary-light dark:bg-secondary-dark ${
+            active
+              ? 'bg-secondary-container-light dark:bg-secondary-container-dark'
+              : ''
+          }`
         : color === 'tertiary'
-        ? 'bg-tertiary-light dark:bg-tertiary-dark'
+        ? `bg-tertiary-light dark:bg-tertiary-dark ${
+            active
+              ? 'bg-tertiary-container-light dark:bg-tertiary-container-dark'
+              : ''
+          }`
         : color === 'error'
-        ? 'bg-error-light dark:bg-error-dark'
+        ? `bg-error-light dark:bg-error-dark ${
+            active
+              ? 'bg-error-container-light dark:bg-error-container-dark'
+              : ''
+          }`
         : ''
     }
     after:inset-0
+    ${
+      loading
+        ? 'bg-on-surface-light/[.12] shadow-shadow-elevation-0 cursor-not-allowed'
+        : ''
+    }
     disabled:bg-on-surface-light/[.12]
     disabled:shadow-shadow-elevation-0
     disabled:cursor-not-allowed
@@ -51,16 +75,41 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     leading-label-large
     font-label-large
     text-on-primary-light dark:text-on-primary-dark
-    
+    ${
+      active
+        ? 'text-on-primary-container-light dark:text-on-primary-container-dark'
+        : ''
+    }
     ${
       color === 'primary'
-        ? 'text-on-primary-light dark:text-on-primary-dark'
+        ? `text-on-primary-light dark:text-on-primary-dark ${
+            active
+              ? 'text-on-primary-container-light dark:text-on-primary-container-dark'
+              : ''
+          }`
         : color === 'secondary'
-        ? 'text-on-secondary-light dark:text-on-secondary-dark'
+        ? `text-on-secondary-light dark:text-on-secondary-dark ${
+            active
+              ? 'text-on-secondary-container-light dark:text-on-secondary-container-dark'
+              : ''
+          }`
         : color === 'tertiary'
-        ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
+        ? `text-on-tertiary-light dark:text-on-tertiary-dark ${
+            active
+              ? 'text-on-tertiary-container-light dark:text-on-tertiary-container-dark'
+              : ''
+          }`
         : color === 'error'
-        ? 'text-on-error-light dark:text-on-error-dark'
+        ? `text-on-error-light dark:text-on-error-dark ${
+            active
+              ? 'text-on-error-container-light dark:text-on-error-container-dark'
+              : ''
+          }`
+        : ''
+    }
+    ${
+      loading
+        ? 'text-on-surface-light/[.38] shadow-shadow-elevation-0 cursor-not-allowed'
         : ''
     }
     group-disabled/container:text-on-surface-light/[.38]
@@ -70,14 +119,40 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     text-lg
     text-on-primary-light dark:text-on-primary-dark
     ${
+      active
+        ? 'text-on-primary-container-light dark:text-on-primary-container-dark'
+        : ''
+    }
+    ${
       color === 'primary'
-        ? 'text-on-primary-light dark:text-on-primary-dark'
+        ? `text-on-primary-light dark:text-on-primary-dark ${
+            active
+              ? 'text-on-primary-container-light dark:text-on-primary-container-dark'
+              : ''
+          }`
         : color === 'secondary'
-        ? 'text-on-secondary-light dark:text-on-secondary-dark'
+        ? `text-on-secondary-light dark:text-on-secondary-dark ${
+            active
+              ? 'text-on-secondary-container-light dark:text-on-secondary-container-dark'
+              : ''
+          }`
         : color === 'tertiary'
-        ? 'text-on-tertiary-light dark:text-on-tertiary-dark'
+        ? `text-on-tertiary-light dark:text-on-tertiary-dark ${
+            active
+              ? 'text-on-tertiary-container-light dark:text-on-tertiary-container-dark'
+              : ''
+          }`
         : color === 'error'
-        ? 'text-on-error-light dark:text-on-error-dark'
+        ? `text-on-error-light dark:text-on-error-dark ${
+            active
+              ? 'text-on-error-container-light dark:text-on-error-container-dark'
+              : ''
+          }`
+        : ''
+    }
+    ${
+      loading
+        ? 'text-on-surface-light/[.38] shadow-shadow-elevation-0 cursor-not-allowed'
         : ''
     }
      group-disabled/container:text-on-surface-light/[.38]
