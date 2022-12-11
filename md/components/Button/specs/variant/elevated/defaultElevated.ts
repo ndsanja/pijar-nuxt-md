@@ -31,9 +31,9 @@ export const defaultButtonElevatedSpecs = (props: ButtonPropsType) => {
         : ''
     }
     disabled:bg-on-surface-light/[.12]
-    disabled:shadow-shadow-elevation-0
+    disabled:shadow-elevation-0-light disabled:dark:shadow-elevation-0-dark
     disabled:cursor-not-allowed
-    hover:after:opacity-state-hover
+    hover:after:opacity-state-hover 
     hover:shadow-elevation-2-light dark:hover:shadow-elevation-2-dark
     focus:after:opacity-state-focus
     focus:shadow-elevation-1-light dark:focus:shadow-elevation-1-dark
