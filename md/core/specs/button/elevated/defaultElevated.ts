@@ -1,4 +1,7 @@
-import { ElevatedButtonSpecsType, ButtonPropsType } from '../../../types';
+import {
+  ElevatedButtonSpecsType,
+  ButtonPropsType,
+} from '../../../types/button';
 
 export const defaultButtonElevatedSpecs = (props: ButtonPropsType) => {
   const { color, endIcon, size, startIcon, variant, active, loading } = props;

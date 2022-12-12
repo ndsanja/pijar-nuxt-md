@@ -1,8 +1,7 @@
 import type { Config } from 'tailwindcss';
-import { token } from './md/tokens/tokens';
-import { themeColors } from './md/styles/colors';
-import { typography } from './md/styles/typography';
-import { elevation } from './md/styles/elevation';
+import { themeColors } from './md/core/styles/colors';
+import { typography } from './md/core/styles/typography';
+import { elevation } from './md/core/styles/elevation';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const colorsMode = themeColors(true).md.sys.color;

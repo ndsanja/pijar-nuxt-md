@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from '~~/md';
+import { Button } from '~~/md/vue';
 </script>
 
 <template>

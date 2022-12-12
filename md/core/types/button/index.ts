@@ -35,6 +35,12 @@ export type ButtonSpecsType = {
   };
 };
 
+export type ButtonType = {
+  container?: string;
+  labelText?: string;
+  icon?: string;
+};
+
 export type FilledButtonSpecsType = {
   container?: string;
   labelText?: string;
