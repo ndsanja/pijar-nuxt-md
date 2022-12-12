@@ -18,6 +18,7 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
       bgColorSpecs = tw(`bg-error-light dark:bg-error-dark`);
       break;
     default:
+      bgColorSpecs = '';
       break;
   }
 
@@ -45,37 +46,40 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
   let textColorSpecs = '';
   switch (color) {
     case 'primary':
-      textColorSpecs = tw(`text-primary-light dark:text-primary-dark`);
+      textColorSpecs = tw(`text-on-primary-light dark:text-on-primary-dark`);
       break;
     case 'secondary':
-      textColorSpecs = tw(`text-secondary-light dark:text-secondary-dark`);
+      textColorSpecs = tw(
+        `text-on-secondary-light dark:text-on-secondary-dark`
+      );
       break;
     case 'tertiary':
-      textColorSpecs = tw(`text-tertiary-light dark:text-tertiary-dark`);
+      textColorSpecs = tw(`text-on-tertiary-light dark:text-on-tertiary-dark`);
       break;
     case 'error':
-      textColorSpecs = tw(`text-error-light dark:text-error-dark`);
+      textColorSpecs = tw(`text-on-error-light dark:text-on-error-dark`);
       break;
     default:
+      textColorSpecs = '';
       break;
   }
 
   let textColorActiveSpecs = '';
   if (color === 'primary' && active === true) {
     textColorActiveSpecs = tw(
-      `text-primary-container-light dark:text-primary-container-dark`
+      `text-on-primary-container-light dark:text-on-primary-container-dark`
     );
   } else if (color === 'secondary' && active === true) {
     textColorActiveSpecs = tw(
-      `text-secondary-container-light dark:text-secondary-container-dark`
+      `text-on-secondary-container-light dark:text-on-secondary-container-dark`
     );
   } else if (color === 'tertiary' && active === true) {
     textColorActiveSpecs = tw(
-      `text-tertiary-container-light dark:text-tertiary-container-dark`
+      `text-on-tertiary-container-light dark:text-on-tertiary-container-dark`
     );
   } else if (color === 'error' && active === true) {
     textColorActiveSpecs = tw(
-      `text-error-container-light dark:text-error-container-dark`
+      `text-on-error-container-light dark:text-on-error-container-dark`
     );
   } else {
     textColorActiveSpecs = '';
@@ -100,10 +104,9 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     bg-primary-light dark:bg-primary-dark
     ${active ? 'bg-primary-container-light dark:bg-primary-container-dark' : ''}
 
-    ${bgColorSpecs}
-    ${bgColorActiveSpecs}
-    
+    ${active ? bgColorActiveSpecs : bgColorSpecs}    
     after:inset-0
+
     ${
       loading
         ? 'bg-on-surface-light/[.12] shadow-shadow-elevation-0 cursor-not-allowed'
@@ -121,7 +124,7 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     `),
 
     labelText: tw(`
-    group/container
+    group/label-text
     text-center
     font-brand
     text-label-large
@@ -135,9 +138,7 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
         : ''
     }
 
-    ${textColorSpecs}
-    ${textColorActiveSpecs}
-    
+    ${active ? textColorActiveSpecs : textColorSpecs}
     ${
       loading
         ? 'text-on-surface-light/[.38] shadow-shadow-elevation-0 cursor-not-allowed'
@@ -154,9 +155,8 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
         ? 'text-on-primary-container-light dark:text-on-primary-container-dark'
         : ''
     }
-    
-    ${textColorSpecs}
-    ${textColorActiveSpecs}
+      
+    ${active ? textColorActiveSpecs : textColorSpecs}
 
     ${
       loading

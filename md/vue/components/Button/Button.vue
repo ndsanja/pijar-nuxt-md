@@ -4,7 +4,7 @@ import { buttonSpecs } from '~~/md/core';
 
 
 export type Props = {
-  variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated';
+  variant?: 'filled' | 'tonal' | 'outlined' | 'text' | 'elevated';
   size?: 'small' | 'medium' | 'large' | 'extra-large';
   color?: 'primary' | 'secondary' | 'tertiary' | 'error';
   startIcon?: any;
@@ -23,8 +23,6 @@ const { color, endIcon, size, startIcon, variant, specs, active, loading } = wit
 const specsButton = buttonSpecs({
   active, color, endIcon, loading, size, specs, startIcon, variant
 })
-
-console.log(specsButton);
 
 </script>
 

@@ -1,5 +1,5 @@
 export type ButtonPropsType = {
-  variant?: 'filled' | 'tonal' | 'bordered' | 'text' | 'elevated';
+  variant?: 'filled' | 'tonal' | 'outlined' | 'text' | 'elevated';
   size?: 'small' | 'medium' | 'large' | 'extra-large';
   color?: 'primary' | 'secondary' | 'tertiary' | 'error';
   startIcon?: any;
@@ -27,6 +27,11 @@ export type ButtonSpecsType = {
       labelText?: string;
       icon?: string;
     };
+    outlined?: {
+      container?: string;
+      labelText?: string;
+      icon?: string;
+    };
     text?: {
       container?: string;
       labelText?: string;
@@ -48,6 +53,12 @@ export type FilledButtonSpecsType = {
 };
 
 export type ElevatedButtonSpecsType = {
+  container?: string;
+  labelText?: string;
+  icon?: string;
+};
+
+export type OutlinedButtonSpecsType = {
   container?: string;
   labelText?: string;
   icon?: string;

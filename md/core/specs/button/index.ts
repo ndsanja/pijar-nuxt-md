@@ -1,5 +1,6 @@
 import { buttonElevatedSpecs } from './elevated';
 import { buttonFilledSpecs } from './filled';
+import { buttonOutlinedSpecs } from './outlined';
 import { ButtonPropsType, ButtonType } from '../../types/button';
 
 export const buttonSpecs = (props: ButtonPropsType) => {
@@ -27,6 +28,18 @@ export const buttonSpecs = (props: ButtonPropsType) => {
       size: props.size,
     }
   );
+  const buttonOutlined = buttonOutlinedSpecs(
+    { props: props.specs?.variant?.filled },
+    {
+      active: props.active,
+      color: props.color,
+      startIcon: props.startIcon,
+      endIcon: props.endIcon,
+      variant: props.variant,
+      loading: props.loading,
+      size: props.size,
+    }
+  );
 
   let buttonVariant: ButtonType = {};
   switch (props.variant) {
@@ -35,6 +48,9 @@ export const buttonSpecs = (props: ButtonPropsType) => {
       break;
     case 'filled':
       buttonVariant = buttonFilled;
+      break;
+    case 'outlined':
+      buttonVariant = buttonOutlined;
       break;
     default:
       buttonVariant = buttonFilled;
