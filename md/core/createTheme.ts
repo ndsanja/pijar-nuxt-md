@@ -35,6 +35,10 @@ export const createTheme = () => {
           },
         },
       },
+      fab: {
+        container: '',
+        icon: '',
+      },
     },
   };
 
