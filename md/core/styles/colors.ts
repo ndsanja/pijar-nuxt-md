@@ -90,9 +90,9 @@ export const themeColors = (isLight: boolean) => {
               dark: color.primary[40],
             },
             surface: {
-              default: isLight ? color.neutral[20] : color.neutral[90],
+              default: isLight ? color.neutral[20] : color.neutral[40],
               light: color.neutral[20],
-              dark: color.neutral[90],
+              dark: color.neutral[40],
             },
             on: {
               surface: {
@@ -103,9 +103,9 @@ export const themeColors = (isLight: boolean) => {
             },
           },
           shadow: {
-            default: isLight ? color.neutral[0] : color.neutral[0],
+            default: isLight ? color.neutral[0] : color.neutral[90],
             light: color.neutral[0],
-            dark: color.neutral[0],
+            dark: color.neutral[90],
           },
           scrim: {
             default: isLight ? color.neutral[0] : color.neutral[0],

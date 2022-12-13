@@ -63,3 +63,13 @@ export type OutlinedButtonSpecsType = {
   labelText?: string;
   icon?: string;
 };
+export type TonalButtonSpecsType = {
+  container?: string;
+  labelText?: string;
+  icon?: string;
+};
+export type TextButtonSpecsType = {
+  container?: string;
+  labelText?: string;
+  icon?: string;
+};

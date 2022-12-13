@@ -1,21 +1,29 @@
-import { FilledButtonSpecsType, ButtonPropsType } from '../../../types/button';
+import { TonalButtonSpecsType, ButtonPropsType } from '../../../types/button';
 
-export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
+export const defaultButtonTonalSpecs = (props: ButtonPropsType) => {
   const { color, endIcon, size, startIcon, variant, active, loading } = props;
 
   let bgColorSpecs = '';
   switch (color) {
     case 'primary':
-      bgColorSpecs = tw(`bg-primary-light dark:bg-primary-dark`);
+      bgColorSpecs = tw(
+        `bg-primary-container-light dark:bg-primary-container-dark`
+      );
       break;
     case 'secondary':
-      bgColorSpecs = tw(`bg-secondary-light dark:bg-secondary-dark`);
+      bgColorSpecs = tw(
+        `bg-secondary-container-light dark:bg-secondary-container-dark`
+      );
       break;
     case 'tertiary':
-      bgColorSpecs = tw(`bg-tertiary-light dark:bg-tertiary-dark`);
+      bgColorSpecs = tw(
+        `bg-tertiary-container-light dark:bg-tertiary-container-dark`
+      );
       break;
     case 'error':
-      bgColorSpecs = tw(`bg-error-light dark:bg-error-dark`);
+      bgColorSpecs = tw(
+        `bg-error-container-light dark:bg-error-container-dark`
+      );
       break;
     default:
       bgColorSpecs = '';
@@ -46,18 +54,24 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
   let textColorSpecs = '';
   switch (color) {
     case 'primary':
-      textColorSpecs = tw(`text-on-primary-light dark:text-on-primary-dark`);
+      textColorSpecs = tw(
+        `text-on-primary-container-light dark:text-on-primary-container-dark`
+      );
       break;
     case 'secondary':
       textColorSpecs = tw(
-        `text-on-secondary-light dark:text-on-secondary-dark`
+        `text-on-secondary-container-light dark:text-on-secondary-container-dark`
       );
       break;
     case 'tertiary':
-      textColorSpecs = tw(`text-on-tertiary-light dark:text-on-tertiary-dark`);
+      textColorSpecs = tw(
+        `text-on-tertiary-container-light dark:text-on-tertiary-container-dark`
+      );
       break;
     case 'error':
-      textColorSpecs = tw(`text-on-error-light dark:text-on-error-dark`);
+      textColorSpecs = tw(
+        `text-on-error-container-light dark:text-on-error-container-dark`
+      );
       break;
     default:
       textColorSpecs = '';
@@ -85,7 +99,7 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     textColorActiveSpecs = '';
   }
 
-  const specs: FilledButtonSpecsType = {
+  const specs: TonalButtonSpecsType = {
     container: tw(`
     group/container
 
@@ -129,22 +143,22 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     disabled:cursor-not-allowed
 
     hover:after:absolute
-    hover:after:bg-on-primary-light
-    dark:hover:after:bg-on-primary-dark
+    hover:after:bg-on-primary-container-light
+    dark:hover:after:bg-on-primary-container-dark
     hover:after:opacity-state-hover
     hover:shadow-elevation-1-light
     dark:hover:shadow-elevation-1-dark
 
     focus:after:absolute
-    focus:after:bg-on-primary-light
-    dark:focus:after:bg-on-primary-dark
+    focus:after:bg-on-primary-container-light
+    dark:focus:after:bg-on-primary-container-dark
     focus:after:opacity-state-focus
 
     focus:shadow-elevation-0-light
     dark:focus:shadow-elevation-0-dark
     active:after:absolute
-    active:after:bg-on-primary-light
-    dark:active:after:bg-on-primary-dark
+    active:after:bg-on-primary-container-light
+    dark:active:after:bg-on-primary-container-dark
     active:after:opacity-20
     active:shadow-elevation-0-light
     dark:active:shadow-elevation-0-dark

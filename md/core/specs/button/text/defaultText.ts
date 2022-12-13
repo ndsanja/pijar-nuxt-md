@@ -1,9 +1,6 @@
-import {
-  OutlinedButtonSpecsType,
-  ButtonPropsType,
-} from '../../../types/button';
+import { TextButtonSpecsType, ButtonPropsType } from '../../../types/button';
 
-export const defaultButtonOutlinedSpecs = (props: ButtonPropsType) => {
+export const defaultButtonTextSpecs = (props: ButtonPropsType) => {
   const { active, color, endIcon, loading, size, startIcon, variant } = props;
 
   let bgHoverColorSpecs = '';
@@ -148,7 +145,7 @@ export const defaultButtonOutlinedSpecs = (props: ButtonPropsType) => {
     textColorActiveSpecs = '';
   }
 
-  const specs: OutlinedButtonSpecsType = {
+  const specs: TextButtonSpecsType = {
     container: tw(`
     group/container
 
@@ -173,12 +170,9 @@ export const defaultButtonOutlinedSpecs = (props: ButtonPropsType) => {
 
     ${bgColorActiveSpecs}
 
-    outline
-    outline-1
-    outline-outline-light
-    dark:outline-outline-dark
-    disabled:outline-on-surface-light/[.12]
-    dark:disabled:outline-on-surface-dark/[.12]
+    
+    disabled:bg-on-surface-light/[.12]
+    dark:disabled:bg-on-surface-dark/[.12]
     disabled:cursor-not-allowed
 
     after:inset-0
