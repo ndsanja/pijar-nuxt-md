@@ -12,7 +12,7 @@ export const defaultButtonTonalSpecs = (props: ButtonPropsType) => {
       break;
     case 'secondary':
       bgColorSpecs = tw(
-        `bg-secondary-container-light dark:bg-secondary-container-dark`
+        `!bg-secondary-container-light dark:!bg-secondary-container-dark`
       );
       break;
     case 'tertiary':
@@ -37,7 +37,7 @@ export const defaultButtonTonalSpecs = (props: ButtonPropsType) => {
     );
   } else if (color === 'secondary' && active === true) {
     bgColorActiveSpecs = tw(
-      `bg-secondary-container-light dark:bg-secondary-container-dark`
+      `!bg-secondary-container-light dark:!bg-secondary-container-dark`
     );
   } else if (color === 'tertiary' && active === true) {
     bgColorActiveSpecs = tw(
@@ -60,7 +60,7 @@ export const defaultButtonTonalSpecs = (props: ButtonPropsType) => {
       break;
     case 'secondary':
       textColorSpecs = tw(
-        `text-on-secondary-container-light dark:text-on-secondary-container-dark`
+        `!text-on-secondary-container-light dark:!text-on-secondary-container-dark`
       );
       break;
     case 'tertiary':
@@ -85,7 +85,7 @@ export const defaultButtonTonalSpecs = (props: ButtonPropsType) => {
     );
   } else if (color === 'secondary' && active === true) {
     textColorActiveSpecs = tw(
-      `text-on-secondary-container-light dark:text-on-secondary-container-dark`
+      `!text-on-secondary-container-light dark:!text-on-secondary-container-dark`
     );
   } else if (color === 'tertiary' && active === true) {
     textColorActiveSpecs = tw(

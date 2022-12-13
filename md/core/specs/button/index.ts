@@ -31,7 +31,7 @@ export const buttonSpecs = (props: ButtonPropsType) => {
     }
   );
   const buttonOutlined = buttonOutlinedSpecs(
-    { props: props.specs?.variant?.filled },
+    { props: props.specs?.variant?.outlined },
     {
       active: props.active,
       color: props.color,
@@ -43,7 +43,7 @@ export const buttonSpecs = (props: ButtonPropsType) => {
     }
   );
   const buttonTonal = buttonTonalSpecs(
-    { props: props.specs?.variant?.filled },
+    { props: props.specs?.variant?.tonal },
     {
       active: props.active,
       color: props.color,
@@ -55,7 +55,7 @@ export const buttonSpecs = (props: ButtonPropsType) => {
     }
   );
   const buttonText = buttonTextSpecs(
-    { props: props.specs?.variant?.filled },
+    { props: props.specs?.variant?.text },
     {
       active: props.active,
       color: props.color,

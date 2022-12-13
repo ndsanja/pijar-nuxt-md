@@ -28,13 +28,13 @@ export const themeColors = (isLight: boolean) => {
             },
           },
           tertiary: {
-            default: isLight ? '#7D5260' : '#EFB8C8',
-            light: '#7D5260',
-            dark: '#EFB8C8',
+            default: isLight ? color.tertiary[40] : color.tertiary[80],
+            light: color.tertiary[40],
+            dark: color.tertiary[80],
             container: {
-              default: isLight ? '#FFD8E4' : '#633B48',
-              light: '#FFD8E4',
-              dark: '#633B48',
+              default: isLight ? color.tertiary[90] : color.tertiary[30],
+              light: color.tertiary[90],
+              dark: color.tertiary[30],
             },
           },
           error: {
@@ -134,13 +134,13 @@ export const themeColors = (isLight: boolean) => {
               },
             },
             tertiary: {
-              default: isLight ? '#FFFFFF' : '#492532',
-              light: '#FFFFFF',
-              dark: '#492532',
+              default: isLight ? color.tertiary[100] : color.tertiary[20],
+              light: color.tertiary[100],
+              dark: color.tertiary[20],
               container: {
-                default: isLight ? '#31111D' : '#FFD8E4',
-                light: '#31111D',
-                dark: '#FFD8E4',
+                default: isLight ? color.tertiary[10] : color.tertiary[90],
+                light: color.tertiary[10],
+                dark: color.tertiary[90],
               },
             },
             error: {
