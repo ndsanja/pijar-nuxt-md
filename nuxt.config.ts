@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  postcss: {
+    plugins: {
+      'postcss-import': {},
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',

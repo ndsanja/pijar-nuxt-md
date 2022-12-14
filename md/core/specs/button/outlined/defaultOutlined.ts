@@ -1,8 +1,3 @@
-import { bgColors } from '../../../utils/bgColors';
-import { textColors } from '../../../utils/textColors';
-import { stateColors } from '../../../utils/stateColors';
-import { outlineColors } from '../../../utils/outlineColors';
-
 import {
   OutlinedButtonSpecsType,
   ButtonPropsType,
@@ -11,75 +6,55 @@ import {
 export const defaultButtonOutlinedSpecs = (props: ButtonPropsType) => {
   const { active, color, endIcon, loading, size, startIcon, variant } = props;
 
-  const bgColor = bgColors(color);
-  const textColor = textColors(color);
-  const outlineColor = outlineColors(color);
+  let btnColor = '';
+  let btnColorActive = '';
+  let btnColorLoading = '';
 
-  let outlineDisabledSpecs =
-    'disabled:outline-on-surface-light/[.12] dark:disabled:outline-on-surface-dark/[.12]';
-  let textDisabledSpecs =
-    'group-disabled/container:text-on-surface-light/[.38] dark:group-disabled/container:text-on-surface-dark/[.38]';
+  switch (color) {
+    case 'primary':
+      btnColor = 'btn-outlined-primary';
+      btnColorActive = 'btn-outlined-primary-active';
+      btnColorLoading = 'btn-outlined-primary-loading';
+      break;
+    case 'secondary':
+      btnColor = 'btn-outlined-secondary';
+      btnColorActive = 'btn-outlined-secondary-active';
+      btnColorLoading = 'btn-outlined-secondary-loading';
+      break;
+    case 'tertiary':
+      btnColor = 'btn-outlined-tertiary';
+      btnColorActive = 'btn-outlined-tertiary-active';
+      btnColorLoading = 'btn-outlined-tertiary-loading';
+      break;
+    case 'error':
+      btnColor = 'btn-outlined-error';
+      btnColorActive = 'btn-outlined-error-active';
+      btnColorLoading = 'btn-outlined-error-loading';
+      break;
 
+    default:
+      btnColor = 'btn-outlined';
+      btnColorActive = 'btn-outlined-active';
+      btnColorLoading = 'btn-outlined-loading';
+      break;
+  }
   const specs: OutlinedButtonSpecsType = {
     container: tw(`
     group/container
-
-    relative
-    overflow-hidden
-
-    inline-flex
-    items-center
-    justify-center
-    
-    h-10
-    ${startIcon ? 'pr-6' : endIcon ? 'pl-6' : 'px-6'}
-    ${startIcon ? 'pl-4' : ''}
-    ${endIcon ? 'pr-4' : ''}
-    space-x-2
-    rounded-full
-    outline outline-1
-    outline-outline-light dark:outline-outline-dark
-    
-    ${active ? bgColor.bgContainerActiveSpecs : ''}
-    ${loading ? outlineColor.outlineContainerLoadingSpecs : ''}
-    ${bgColor.bgMainHoveredSpecs}
-    ${bgColor.bgMainFocusedSpecs}
-    ${bgColor.bgMainPressedSpecs}
-    ${outlineDisabledSpecs}
-    
-    disabled:cursor-not-allowed
-
-    after:absolute
-    hover:after:inset-0
-    focus:after:inset-0
-    active:after:inset-0
-
-    hover:after:opacity-state-hover
-    focus:after:opacity-state-focus
-    active:after:opacity-20
-
-    shadow-elevation-0-light dark:shadow-elevation-0-dark
-    shadow-shadow-light/20 dark:shadow-shadow-dark/20
+    btn
+    ${startIcon ? 'btn-start-icon' : ''}
+    ${endIcon ? 'btn-end-icon' : ''}
+    ${btnColor}
+    ${active ? btnColorActive : ''}
+    ${loading ? btnColorLoading : ''}
     `),
 
     labelText: tw(`
-    text-center
-    font-brand
-    text-label-large
-    tracking-label-large
-    leading-label-large
-    font-label-large
-
-    ${active ? textColor.textOnContainerActiveSpecs : textColor.textMainSpecs}
-    ${loading ? textColor.textOnContainerLoadingSpecs : ''}
-    ${textDisabledSpecs}
+    btn-label
     `),
 
     icon: tw(`
-    text-lg
-    ${active ? textColor.textOnContainerActiveSpecs : textColor.textMainSpecs}
-    ${loading ? textColor.textOnContainerLoadingSpecs : ''}
-    ${textDisabledSpecs}
+    btn-icon
     `),
   };
 

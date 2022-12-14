@@ -269,6 +269,4 @@ export default <Partial<Config>>(<unknown>{
       },
     },
   },
-
-  plugins: [md],
 });
