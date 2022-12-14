@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 import { themeColors } from './md/core/styles/colors';
 import { typography } from './md/core/styles/typography';
 import { elevation } from './md/core/styles/elevation';
+import { md } from './md/plugin';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const colorsMode = themeColors(true).md.sys.color;
@@ -268,4 +269,6 @@ export default <Partial<Config>>(<unknown>{
       },
     },
   },
+
+  plugins: [md],
 });
