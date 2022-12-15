@@ -24,6 +24,7 @@ export default <Partial<Config>>(<unknown>{
   theme: {
     extend: {
       colors: {
+        test: 'rgb(var(--color-primary) / <alpha-value>)',
         primary: {
           light: colorsMode.primary.light,
           dark: colorsMode.primary.dark,

@@ -7,6 +7,9 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: 255 115 179;
+  }
   html {
     font-family: 'Roboto', system-ui, sans-serif;
   }

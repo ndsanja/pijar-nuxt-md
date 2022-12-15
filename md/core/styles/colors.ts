@@ -1,9 +1,9 @@
-import { token } from '../tokens/tokens';
 import {
   argbFromHex,
   themeFromSourceColor,
   hexFromArgb,
-} from '@material/material-color-utilities';
+} from '../../../colorGenerator';
+import hexRgb from 'hex-rgb';
 
 // Get the theme from a hex color
 export const theme = themeFromSourceColor(argbFromHex('#0ea5e9'), [
@@ -28,6 +28,8 @@ export const theme = themeFromSourceColor(argbFromHex('#0ea5e9'), [
     blend: true,
   },
 ]);
+
+export const toRGB = hexRgb(hexFromArgb(theme.schemes.light.error));
 
 const color = theme.schemes;
 export const themeColors = (isLight: boolean) => {

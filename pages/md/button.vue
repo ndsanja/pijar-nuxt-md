@@ -1,11 +1,25 @@
 <script setup lang="ts">
 import { Button } from '~~/md/vue';
+import { theme, toRGB } from '~~/md/core/styles/colors'
+
+
+const color = useColorGen()
+
+//chnage css variable on runtime
+const changeColor = () => {
+  document.documentElement.style.setProperty(`--color-primary`, `${toRGB.red} ${toRGB.green} ${toRGB.blue}`);
+}
+
 </script>
 
 <template>
   <div
     class="flex flex-col items-center justify-center space-y-8 py-10 text-on-background-light dark:text-on-background-dark bg-background-light dark:bg-background-dark">
-
+    <input type="text" v-model="color">
+    <p>{{ color }}</p>
+    {{ JSON.stringify(toRGB) }}
+    <div class="h-10 w-10 bg-test" />
+    <button @click="changeColor">chagnge</button>
     <div class="flex flex-col items-center justify-center space-x-2">
       <h1 class="text-xl mb-2">ELevated</h1>
       <div class="flex items-center justify-center space-x-2">
@@ -200,6 +214,9 @@ import { Button } from '~~/md/vue';
         </Button>
       </div>
     </div>
+    <pre>
+      {{ JSON.stringify(theme, null, 2) }}
+    </pre>
   </div>
 
 </template>
