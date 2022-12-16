@@ -5,6 +5,7 @@
 @import './md/styles/theme.dark.css' (prefers-color-scheme: dark);
 @import './md/components/button.css';
 @import './md/components/fab.css';
+@import './md/components/extended-fab.css';
 
 @tailwind base;
 @tailwind components;

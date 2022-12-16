@@ -1,6 +1,6 @@
 @layer components {
-  .Fab {
-    @apply relative overflow-hidden inline-flex items-center justify-center h-14 w-14 text-2xl rounded-[16px] m-4 after:absolute !shadow-elevation-3-light dark:!shadow-elevation-3-dark shadow-shadow-light/[0] dark:shadow-shadow-dark/[0];
+  .ExtendedFab {
+    @apply relative overflow-hidden inline-flex items-center justify-center space-x-4 px-6 h-14 min-w-[80px] rounded-[16px] m-4 after:absolute !shadow-elevation-3-light dark:!shadow-elevation-3-dark shadow-shadow-light/[0] dark:shadow-shadow-dark/[0];
 
     &:disabled {
       @apply !bg-on-surface-light/[.12] dark:!bg-on-surface-dark/[.12] !text-on-surface-light/[.38] dark:!text-on-surface-dark/[.38] !cursor-not-allowed after:!hidden !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
@@ -20,30 +20,20 @@
       @apply after:inset-0 after:opacity-20 !shadow-elevation-3-light dark:active:!shadow-elevation-3-dark;
     }
 
-    &.size-sm {
-      @apply h-10 w-10 rounded-[12px] !text-2xl;
+    &.icon-start {
+      @apply pl-4;
     }
 
-    &.size-md {
-      @apply h-14 w-14 rounded-[16px] !text-2xl;
+    &.icon-end {
+      @apply pr-4;
     }
 
-    &.size-lg {
-      @apply h-24 w-24 rounded-[28px] !text-4xl;
+    > .ExtendedFab__label {
+      @apply text-center font-brand text-label-large font-medium;
     }
 
-    > .Fab__icon {
-      @apply !text-2xl;
-
-      &.size-sm {
-        @apply !text-2xl;
-      }
-      &.size-md {
-        @apply !text-2xl;
-      }
-      &.size-lg {
-        @apply !text-4xl;
-      }
+    > .ExtendedFab__icon {
+      @apply text-2xl;
     }
 
     /* BTN SURFACE */
