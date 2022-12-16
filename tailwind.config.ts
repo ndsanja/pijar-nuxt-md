@@ -1,11 +1,9 @@
 import type { Config } from 'tailwindcss';
-import { themeColors } from './md/core/styles/colors';
 import { typography } from './md/core/styles/typography';
 import { elevation } from './md/core/styles/elevation';
 import { md } from './md/plugin';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const colorsMode = themeColors(true).md.sys.color;
 const srcDir = '.';
 
 export default <Partial<Config>>(<unknown>{
@@ -24,130 +22,145 @@ export default <Partial<Config>>(<unknown>{
   theme: {
     extend: {
       colors: {
-        test: 'rgb(var(--color-primary) / <alpha-value>)',
         primary: {
-          light: colorsMode.primary.light,
-          dark: colorsMode.primary.dark,
+          light: 'rgb(var(--md-sys-color-primary-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-primary-dark) / <alpha-value>)',
           container: {
-            light: colorsMode.primary.container.light,
-            dark: colorsMode.primary.container.dark,
+            light:
+              'rgb(var(--md-sys-color-primary-container-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-primary-container-dark) / <alpha-value>)',
           },
         },
         secondary: {
-          light: colorsMode.secondary.light,
-          dark: colorsMode.secondary.dark,
+          light: 'rgb(var(--md-sys-color-secondary-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-secondary-dark) / <alpha-value>)',
           container: {
-            light: colorsMode.secondary.container.light,
-            dark: colorsMode.secondary.container.dark,
+            light:
+              'rgb(var(--md-sys-color-secondary-container-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-secondary-container-dark) / <alpha-value>)',
           },
         },
         tertiary: {
-          light: colorsMode.tertiary.light,
-          dark: colorsMode.tertiary.dark,
+          light: 'rgb(var(--md-sys-color-tertiary-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-tertiary-dark) / <alpha-value>)',
           container: {
-            light: colorsMode.tertiary.container.light,
-            dark: colorsMode.tertiary.container.dark,
+            light:
+              'rgb(var(--md-sys-color-tertiary-container-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-tertiary-container-dark) / <alpha-value>)',
           },
         },
         error: {
-          light: colorsMode.error.light,
-          dark: colorsMode.error.dark,
+          light: 'rgb(var(--md-sys-color-error-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-error-dark) / <alpha-value>)',
           container: {
-            light: colorsMode.error.container.light,
-            dark: colorsMode.error.container.dark,
+            light:
+              'rgb(var(--md-sys-color-error-container-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-error-container-dark) / <alpha-value>)',
           },
         },
         outline: {
-          light: colorsMode.outline.light,
-          dark: colorsMode.outline.dark,
+          light: 'rgb(var(--md-sys-color-outline-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-outline-dark) / <alpha-value>)',
           variant: {
-            light: colorsMode.outline.variant.light,
-            dark: colorsMode.outline.variant.dark,
+            light:
+              'rgb(var(--md-sys-color-outline-variant-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-outline-variant-dark) / <alpha-value>)',
           },
         },
         background: {
-          light: colorsMode.background.light,
-          dark: colorsMode.background.dark,
+          light: 'rgb(var(--md-sys-color-background-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-background-dark) / <alpha-value>)',
         },
         surface: {
-          light: colorsMode.surface.light,
-          dark: colorsMode.surface.dark,
+          light: 'rgb(var(--md-sys-color-surface-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-surface-dark) / <alpha-value>)',
           variant: {
-            light: colorsMode.surface.variant.light,
-            dark: colorsMode.surface.variant.dark,
+            light:
+              'rgb(var(--md-sys-color-surface-variant-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-surface-variant-dark) / <alpha-value>)',
           },
           tint: {
-            light: colorsMode.surface.tint.light,
-            dark: colorsMode.surface.tint.dark,
+            light:
+              'rgb(var(--md-sys-color-surface-tint-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-surface-tint-dark) / <alpha-value>)',
           },
         },
         inverse: {
           primary: {
-            light: colorsMode.inverse.primary.light,
-            dark: colorsMode.inverse.primary.dark,
+            light: 'rgb(var(--md-sys-color-inverse-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-inverse-dark) / <alpha-value>)',
           },
           surface: {
-            light: colorsMode.inverse.surface.light,
-            dark: colorsMode.inverse.surface.dark,
+            light:
+              'rgb(var(--md-sys-color-inverse-surface-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-inverse-surface-dark) / <alpha-value>)',
           },
           on: {
             surface: {
-              light: colorsMode.inverse.on.surface.light,
-              dark: colorsMode.inverse.on.surface.dark,
+              light:
+                'rgb(var(--md-sys-color-inverse-on-surface-light) / <alpha-value>)',
+              dark: 'rgb(var(--md-sys-color-inverse-on-surface-dark) / <alpha-value>)',
             },
           },
         },
         shadow: {
-          light: colorsMode.shadow.light,
-          dark: colorsMode.shadow.dark,
+          light: 'rgb(var(--md-sys-color-shadow-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-shadow-dark) / <alpha-value>)',
         },
         scrim: {
-          light: colorsMode.scrim.light,
-          dark: colorsMode.scrim.dark,
+          light: 'rgb(var(--md-sys-color-scrim-light) / <alpha-value>)',
+          dark: 'rgb(var(--md-sys-color-scrim-dark) / <alpha-value>)',
         },
         on: {
           primary: {
-            light: colorsMode.on.primary.light,
-            dark: colorsMode.on.primary.dark,
+            light: 'rgb(var(--md-sys-color-on-primary-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-on-primary-dark) / <alpha-value>)',
             container: {
-              light: colorsMode.on.primary.container.light,
-              dark: colorsMode.on.primary.container.dark,
+              light:
+                'rgb(var(--md-sys-color-on-primary-container-light) / <alpha-value>)',
+              dark: 'rgb(var(--md-sys-color-on-primary-container-dark) / <alpha-value>)',
             },
           },
           secondary: {
-            light: colorsMode.on.secondary.light,
-            dark: colorsMode.on.secondary.dark,
+            light:
+              'rgb(var(--md-sys-color-on-secondary-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-on-secondary-dark) / <alpha-value>)',
             container: {
-              light: colorsMode.on.secondary.container.light,
-              dark: colorsMode.on.secondary.container.dark,
+              light:
+                'rgb(var(--md-sys-color-on-secondary-container-light) / <alpha-value>)',
+              dark: 'rgb(var(--md-sys-color-on-secondary-container-dark) / <alpha-value>)',
             },
           },
           tertiary: {
-            light: colorsMode.on.tertiary.light,
-            dark: colorsMode.on.tertiary.dark,
+            light: 'rgb(var(--md-sys-color-on-tertiary-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-on-tertiary-dark) / <alpha-value>)',
             container: {
-              light: colorsMode.on.tertiary.container.light,
-              dark: colorsMode.on.tertiary.container.dark,
+              light:
+                'rgb(var(--md-sys-color-on-tertiary-container-light) / <alpha-value>)',
+              dark: 'rgb(var(--md-sys-color-on-tertiary-container-dark) / <alpha-value>)',
             },
           },
           error: {
-            light: colorsMode.on.error.light,
-            dark: colorsMode.on.error.dark,
+            light: 'rgb(var(--md-sys-color-on-error-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-on-error-dark) / <alpha-value>)',
             container: {
-              light: colorsMode.on.error.container.light,
-              dark: colorsMode.on.error.container.dark,
+              light:
+                'rgb(var(--md-sys-color-on-error-container-light) / <alpha-value>)',
+              dark: 'rgb(var(--md-sys-color-on-error-container-dark) / <alpha-value>)',
             },
           },
           background: {
-            light: colorsMode.on.background.light,
-            dark: colorsMode.on.background.dark,
+            light:
+              'rgb(var(--md-sys-color-on-background-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-on-background-dark) / <alpha-value>)',
           },
           surface: {
-            light: colorsMode.on.surface.light,
-            dark: colorsMode.on.surface.dark,
+            light: 'rgb(var(--md-sys-color-on-surface-light) / <alpha-value>)',
+            dark: 'rgb(var(--md-sys-color-on-surface-dark) / <alpha-value>)',
             variant: {
-              light: colorsMode.on.surface.variant.light,
-              dark: colorsMode.on.surface.variant.dark,
+              light:
+                'rgb(var(--md-sys-color-on-surface-variant-light) / <alpha-value>)',
+              dark: 'rgb(var(--md-sys-color-on-surface-variant-dark) / <alpha-value>)',
             },
           },
         },
