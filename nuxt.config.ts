@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       'postcss-import': {},
+      'postcss-nesting': {},
     },
   },
   modules: [

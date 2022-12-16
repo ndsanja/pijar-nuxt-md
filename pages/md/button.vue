@@ -32,23 +32,23 @@ const changeColor = () => {
     <div class="flex flex-col items-center justify-center space-x-2">
       <h1 class="text-xl mb-2">Filled</h1>
       <div class="flex items-center justify-center space-x-2">
-        <button class="btn btn-start-icon btn-filled">
+        <button class="btn filled start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">base</span>
         </button>
-        <button class="btn btn-filled-primary btn-start-icon">
+        <button class="btn filled primary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">primary</span>
         </button>
-        <button class="btn btn-filled-secondary btn-start-icon">
+        <button class="btn filled secondary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">secondary</span>
         </button>
-        <button class="btn btn-filled-tertiary btn-start-icon">
+        <button class="btn filled tertiary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">tertiary</span>
         </button>
-        <button class="btn btn-filled-error btn-start-icon">
+        <button class="btn filled error start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">error</span>
         </button>
@@ -58,23 +58,23 @@ const changeColor = () => {
     <div class="flex flex-col items-center justify-center space-x-2">
       <h1 class="text-xl mb-2">Oulined</h1>
       <div class="flex items-center justify-center space-x-2">
-        <button class="btn btn-start-icon btn-outlined">
+        <button class="btn start-icon outlined">
           <span class="btn-icon">+</span>
           <span class="btn-label">base</span>
         </button>
-        <button class="btn btn-outlined-primary btn-start-icon">
+        <button class="btn outlined primary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">primary</span>
         </button>
-        <button class="btn btn-outlined-secondary btn-start-icon">
+        <button class="btn outlined secondary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">secondary</span>
         </button>
-        <button class="btn btn-outlined-tertiary btn-start-icon">
+        <button class="btn outlined tertiary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">tertiary</span>
         </button>
-        <button class="btn btn-outlined-error btn-start-icon">
+        <button class="btn outlined error start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">error</span>
         </button>
@@ -84,23 +84,23 @@ const changeColor = () => {
     <div class="flex flex-col items-center justify-center space-x-2">
       <h1 class="text-xl mb-2">Tonal</h1>
       <div class="flex items-center justify-center space-x-2">
-        <button class="btn btn-start-icon btn-tonal">
+        <button class="btn start-icon tonal">
           <span class="btn-icon">+</span>
           <span class="btn-label">base</span>
         </button>
-        <button class="btn btn-tonal-primary btn-start-icon">
+        <button class="btn tonal primary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">primary</span>
         </button>
-        <button class="btn btn-tonal-secondary btn-start-icon">
+        <button class="btn tonal secondary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">secondary</span>
         </button>
-        <button class="btn btn-tonal-tertiary btn-start-icon">
+        <button class="btn tonal tertiary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">tertiary</span>
         </button>
-        <button class="btn btn-tonal-error btn-start-icon">
+        <button class="btn tonal error start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">error</span>
         </button>
@@ -111,23 +111,23 @@ const changeColor = () => {
     <div class="flex flex-col items-center justify-center space-x-2">
       <h1 class="text-xl mb-2">Text</h1>
       <div class="flex items-center justify-center space-x-2">
-        <button class="btn btn-start-icon btn-text">
+        <button class="btn start-icon text">
           <span class="btn-icon">+</span>
           <span class="btn-label">base</span>
         </button>
-        <button class="btn btn-text-primary btn-start-icon">
+        <button class="btn text primary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">primary</span>
         </button>
-        <button class="btn btn-text-secondary btn-start-icon">
+        <button class="btn text secondary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">secondary</span>
         </button>
-        <button class="btn btn-text-tertiary btn-start-icon">
+        <button class="btn text tertiary start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">tertiary</span>
         </button>
-        <button class="btn btn-text-error btn-start-icon">
+        <button class="btn text error start-icon">
           <span class="btn-icon">+</span>
           <span class="btn-label">error</span>
         </button>
