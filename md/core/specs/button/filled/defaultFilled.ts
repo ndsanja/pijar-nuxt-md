@@ -4,35 +4,23 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
   const { color, endIcon, size, startIcon, variant, active, loading } = props;
 
   let btnColor = '';
-  let btnColorActive = '';
-  let btnColorLoading = '';
 
   switch (color) {
     case 'primary':
-      btnColor = 'btn-filled-primary';
-      btnColorActive = 'btn-filled-primary-active';
-      btnColorLoading = 'btn-filled-primary-loading';
+      btnColor = 'primary';
       break;
     case 'secondary':
-      btnColor = 'btn-filled-secondary';
-      btnColorActive = 'btn-filled-secondary-active';
-      btnColorLoading = 'btn-filled-secondary-loading';
+      btnColor = 'secondary';
       break;
     case 'tertiary':
-      btnColor = 'btn-filled-tertiary';
-      btnColorActive = 'btn-filled-tertiary-active';
-      btnColorLoading = 'btn-filled-tertiary-loading';
+      btnColor = 'tertiary';
       break;
     case 'error':
-      btnColor = 'btn-filled-error';
-      btnColorActive = 'btn-filled-error-active';
-      btnColorLoading = 'btn-filled-error-loading';
+      btnColor = 'error';
       break;
 
     default:
-      btnColor = 'btn-filled';
-      btnColorActive = 'btn-filled-active';
-      btnColorLoading = 'btn-filled-loading';
+      btnColor = '';
       break;
   }
 
@@ -40,11 +28,12 @@ export const defaultButtonFilledSpecs = (props: ButtonPropsType) => {
     container: tw(`
     group/container
     btn
-    ${startIcon ? 'btn-start-icon' : ''}
-    ${endIcon ? 'btn-end-icon' : ''}
+    filled
+    ${startIcon ? 'start-icon' : ''}
+    ${endIcon ? 'end-icon' : ''}
     ${btnColor}
-    ${active ? btnColorActive : ''}
-    ${loading ? btnColorLoading : ''}
+    ${active ? 'active' : ''}
+    ${loading ? 'loading' : ''}
     `),
 
     labelText: tw(`

@@ -1,40 +1,26 @@
 import { TonalButtonSpecsType, ButtonPropsType } from '../../../types/button';
-import { bgColors } from '../../../utils/bgColors';
-import { textColors } from '../../../utils/textColors';
 
 export const defaultButtonTonalSpecs = (props: ButtonPropsType) => {
   const { color, endIcon, size, startIcon, variant, active, loading } = props;
 
   let btnColor = '';
-  let btnColorActive = '';
-  let btnColorLoading = '';
 
   switch (color) {
     case 'primary':
-      btnColor = 'btn-tonal-primary';
-      btnColorActive = 'btn-tonal-primary-active';
-      btnColorLoading = 'btn-tonal-primary-loading';
+      btnColor = 'primary';
       break;
     case 'secondary':
-      btnColor = 'btn-tonal-secondary';
-      btnColorActive = 'btn-tonal-secondary-active';
-      btnColorLoading = 'btn-tonal-secondary-loading';
+      btnColor = 'secondary';
       break;
     case 'tertiary':
-      btnColor = 'btn-tonal-tertiary';
-      btnColorActive = 'btn-tonal-tertiary-active';
-      btnColorLoading = 'btn-tonal-tertiary-loading';
+      btnColor = 'tertiary';
       break;
     case 'error':
-      btnColor = 'btn-tonal-error';
-      btnColorActive = 'btn-tonal-error-active';
-      btnColorLoading = 'btn-tonal-error-loading';
+      btnColor = 'error';
       break;
 
     default:
-      btnColor = 'btn-tonal';
-      btnColorActive = 'btn-tonal-active';
-      btnColorLoading = 'btn-tonal-loading';
+      btnColor = '';
       break;
   }
 
@@ -42,11 +28,12 @@ export const defaultButtonTonalSpecs = (props: ButtonPropsType) => {
     container: tw(`
     group/container
     btn
-    ${startIcon ? 'btn-start-icon' : ''}
-    ${endIcon ? 'btn-end-icon' : ''}
+    tonal
+    ${startIcon ? 'start-icon' : ''}
+    ${endIcon ? 'end-icon' : ''}
     ${btnColor}
-    ${active ? btnColorActive : ''}
-    ${loading ? btnColorLoading : ''}
+    ${active ? 'active' : ''}
+    ${loading ? 'loading' : ''}
     `),
 
     labelText: tw(`

@@ -7,46 +7,35 @@ export const defaultButtonOutlinedSpecs = (props: ButtonPropsType) => {
   const { active, color, endIcon, loading, size, startIcon, variant } = props;
 
   let btnColor = '';
-  let btnColorActive = '';
-  let btnColorLoading = '';
 
   switch (color) {
     case 'primary':
-      btnColor = 'btn-outlined-primary';
-      btnColorActive = 'btn-outlined-primary-active';
-      btnColorLoading = 'btn-outlined-primary-loading';
+      btnColor = 'primary';
       break;
     case 'secondary':
-      btnColor = 'btn-outlined-secondary';
-      btnColorActive = 'btn-outlined-secondary-active';
-      btnColorLoading = 'btn-outlined-secondary-loading';
+      btnColor = 'secondary';
       break;
     case 'tertiary':
-      btnColor = 'btn-outlined-tertiary';
-      btnColorActive = 'btn-outlined-tertiary-active';
-      btnColorLoading = 'btn-outlined-tertiary-loading';
+      btnColor = 'tertiary';
       break;
     case 'error':
-      btnColor = 'btn-outlined-error';
-      btnColorActive = 'btn-outlined-error-active';
-      btnColorLoading = 'btn-outlined-error-loading';
+      btnColor = 'error';
       break;
 
     default:
-      btnColor = 'btn-outlined';
-      btnColorActive = 'btn-outlined-active';
-      btnColorLoading = 'btn-outlined-loading';
+      btnColor = '';
       break;
   }
   const specs: OutlinedButtonSpecsType = {
     container: tw(`
     group/container
     btn
-    ${startIcon ? 'btn-start-icon' : ''}
-    ${endIcon ? 'btn-end-icon' : ''}
+    outlined
+    ${startIcon ? 'start-icon' : ''}
+    ${endIcon ? 'end-icon' : ''}
     ${btnColor}
-    ${active ? btnColorActive : ''}
-    ${loading ? btnColorLoading : ''}
+    ${active ? 'active' : ''}
+    ${loading ? 'loading' : ''}
     `),
 
     labelText: tw(`
