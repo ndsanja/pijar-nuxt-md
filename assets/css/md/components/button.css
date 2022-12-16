@@ -1,9 +1,13 @@
 @layer components {
-  .btn {
+  .Button {
     @apply relative overflow-hidden inline-flex items-center justify-center h-10 px-6 space-x-2 rounded-full after:absolute shadow-elevation-0-light dark:after:shadow-elevation-0-dark shadow-shadow-light/5 dark:shadow-shadow-dark/5;
 
     &:disabled {
       @apply bg-on-surface-light/[.12] dark:bg-on-surface-dark/[.12] text-on-surface-light/[.38] dark:text-on-surface-dark/[.38] cursor-not-allowed;
+    }
+
+    &.--disabled {
+      @apply !bg-on-surface-light/[.12] dark:!bg-on-surface-dark/[.12] !text-on-surface-light/[.38] dark:!text-on-surface-dark/[.38] !cursor-not-allowed;
     }
 
     &:hover {
@@ -16,24 +20,24 @@
       @apply hover:after:inset-0 hover:after:opacity-20 shadow-elevation-0-light;
     }
 
-    &.start-icon {
+    &.icon-start {
       @apply pl-4;
     }
 
-    &.end-icon {
+    &.icon-end {
       @apply pr-4;
     }
 
-    > .btn-label {
+    > .Button__label {
       @apply text-center font-brand text-label-large tracking-label-large leading-label-large font-label-large;
     }
 
-    > .btn-icon {
+    > .Button__icon {
       @apply text-lg;
     }
 
     /* BTN FILLED */
-    &.filled {
+    &.variant-filled {
       @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       &:hover {
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
@@ -46,15 +50,15 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.active {
+      &.--active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.loading {
+      &.--loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
       /* BTN PRIMARY FILLED */
-      &.primary {
+      &.color-primary {
         @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
         &:hover {
           @apply after:bg-on-primary-light dark:after:bg-on-primary-dark;
@@ -68,16 +72,16 @@
           @apply after:bg-on-primary-light dark:after:bg-on-primary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
       }
       /* BTN SECONDARY FILLED */
-      &.secondary {
+      &.color-secondary {
         @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
         &:hover {
           @apply after:bg-on-secondary-light dark:after:bg-on-secondary-dark;
@@ -91,16 +95,16 @@
           @apply after:bg-on-secondary-light dark:after:bg-on-secondary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
       }
       /* BTN TERTIARY FILLED */
-      &.tertiary {
+      &.color-tertiary {
         @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
         &:hover {
           @apply after:bg-on-tertiary-light dark:after:bg-on-tertiary-dark;
@@ -114,17 +118,18 @@
           @apply after:bg-on-tertiary-light dark:after:bg-on-tertiary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
       }
       /* BTN ERROR FILLED */
-      &.error {
+      &.color-error {
         @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
+
         &:hover {
           @apply after:bg-on-error-light dark:after:bg-on-error-dark;
         }
@@ -137,18 +142,18 @@
           @apply after:bg-on-error-light dark:after:bg-on-error-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
       }
     }
 
     /* BTN TONAL */
-    &.tonal {
+    &.variant-tonal {
       @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
 
       &:hover {
@@ -163,15 +168,15 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.active {
+      &.--active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.loading {
+      &.--loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
       /* BTN-PRIMARY TONAL */
-      &.primary {
+      &.color-primary {
         @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         &:hover {
           @apply after:bg-on-primary-container-light dark:after:bg-on-primary-container-dark;
@@ -185,16 +190,16 @@
           @apply after:bg-on-primary-container-light dark:after:bg-on-primary-container-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
         }
       }
       /* BTN-SECONDARY TONAL */
-      &.secondary {
+      &.color-secondary {
         @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         &:hover {
           @apply after:bg-on-secondary-container-light dark:after:bg-on-secondary-container-dark;
@@ -208,16 +213,16 @@
           @apply after:bg-on-secondary-container-light dark:after:bg-on-secondary-container-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
         }
       }
       /* BTN-TERTIARY TONAL */
-      &.tertiary {
+      &.color-tertiary {
         @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         &:hover {
           @apply after:bg-on-tertiary-container-light dark:after:bg-on-tertiary-container-dark;
@@ -231,16 +236,16 @@
           @apply after:bg-on-tertiary-container-light dark:after:bg-on-tertiary-container-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
         }
       }
       /* BTN-ERROR TONAL */
-      &.error {
+      &.color-error {
         @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         &:hover {
           @apply after:bg-on-error-container-light dark:after:bg-on-error-container-dark;
@@ -254,18 +259,18 @@
           @apply after:bg-on-error-container-light dark:after:bg-on-error-container-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
         }
       }
     }
 
     /* BTN TEXT */
-    &.text {
+    &.variant-text {
       @apply text-on-surface-variant-light dark:text-on-surface-variant-dark;
 
       &:hover {
@@ -280,16 +285,16 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.active {
+      &.--active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.loading {
+      &.--loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
       /* BTN PRIMARY TEXT */
-      &.primary {
+      &.color-primary {
         @apply text-primary-light dark:text-primary-dark;
         &:hover {
           @apply after:bg-primary-light dark:after:bg-primary-dark;
@@ -303,16 +308,16 @@
           @apply after:bg-primary-light dark:after:bg-primary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
       }
       /* BTN SECONDARY TEXT */
-      &.secondary {
+      &.color-secondary {
         @apply text-secondary-light dark:text-secondary-dark;
         &:hover {
           @apply after:bg-secondary-light dark:after:bg-secondary-dark;
@@ -326,16 +331,16 @@
           @apply after:bg-secondary-light dark:after:bg-secondary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
       }
       /* BTN TERTIARY TEXT */
-      &.tertiary {
+      &.color-tertiary {
         @apply text-tertiary-light dark:text-tertiary-dark;
         &:hover {
           @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
@@ -349,16 +354,16 @@
           @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
       }
       /* BTN ERROR TEXT */
-      &.error {
+      &.color-error {
         @apply text-error-light dark:text-error-dark;
         &:hover {
           @apply after:bg-error-light dark:after:bg-error-dark;
@@ -372,17 +377,17 @@
           @apply after:bg-error-light dark:after:bg-error-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
       }
     }
     /* BTN OUTLINED */
-    &.outlined {
+    &.variant-outlined {
       @apply outline outline-1 outline-surface-variant-light dark:outline-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       &:hover {
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
@@ -396,16 +401,16 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.active {
+      &.--active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.loading {
+      &.--loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
       /* BTN PRIMARY OUTLINED */
-      &.primary {
+      &.color-primary {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-primary-light dark:text-primary-dark;
         &:hover {
           @apply after:bg-primary-light dark:after:bg-primary-dark;
@@ -419,16 +424,16 @@
           @apply after:bg-primary-light dark:after:bg-primary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
       }
       /* BTN SECONDARY OUTLINED */
-      &.secondary {
+      &.color-secondary {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-secondary-light dark:text-secondary-dark;
         &:hover {
           @apply after:bg-secondary-light dark:after:bg-secondary-dark;
@@ -442,16 +447,16 @@
           @apply after:bg-secondary-light dark:after:bg-secondary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
       }
       /* BTN TERTIARY OUTLINED */
-      &.tertiary {
+      &.color-tertiary {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-tertiary-light dark:text-tertiary-dark;
         &:hover {
           @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
@@ -465,16 +470,16 @@
           @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
       }
       /* BTN ERROR OUTLINED */
-      &.error {
+      &.color-error {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-error-light dark:text-error-dark;
         &:hover {
           @apply after:bg-error-light dark:after:bg-error-dark;
@@ -488,11 +493,11 @@
           @apply after:bg-error-light dark:after:bg-error-dark;
         }
 
-        &.active {
+        &.--active {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
 
-        &.loading {
+        &.--loading {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
       }

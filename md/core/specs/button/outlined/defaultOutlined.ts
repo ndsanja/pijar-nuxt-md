@@ -10,16 +10,16 @@ export const defaultButtonOutlinedSpecs = (props: ButtonPropsType) => {
 
   switch (color) {
     case 'primary':
-      btnColor = 'primary';
+      btnColor = 'color-primary';
       break;
     case 'secondary':
-      btnColor = 'secondary';
+      btnColor = 'color-secondary';
       break;
     case 'tertiary':
-      btnColor = 'tertiary';
+      btnColor = 'color-tertiary';
       break;
     case 'error':
-      btnColor = 'error';
+      btnColor = 'color-error';
       break;
 
     default:
@@ -29,21 +29,21 @@ export const defaultButtonOutlinedSpecs = (props: ButtonPropsType) => {
   const specs: OutlinedButtonSpecsType = {
     container: tw(`
     group/container
-    btn
-    outlined
-    ${startIcon ? 'start-icon' : ''}
-    ${endIcon ? 'end-icon' : ''}
+    Button
+    variant-outlined
+    ${startIcon ? 'icon-start' : ''}
+    ${endIcon ? 'icon-end' : ''}
     ${btnColor}
-    ${active ? 'active' : ''}
-    ${loading ? 'loading' : ''}
+    ${active ? '--active' : ''}
+    ${loading ? '--loading' : ''}
     `),
 
     labelText: tw(`
-    btn-label
+    Button__label
     `),
 
     icon: tw(`
-    btn-icon
+    Button__icon
     `),
   };
 
