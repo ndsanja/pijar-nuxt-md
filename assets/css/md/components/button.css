@@ -3,11 +3,11 @@
     @apply relative overflow-hidden inline-flex items-center justify-center h-10 px-6 space-x-2 rounded-full after:absolute shadow-elevation-0-light dark:after:shadow-elevation-0-dark shadow-shadow-light/5 dark:shadow-shadow-dark/5;
 
     &:disabled {
-      @apply bg-on-surface-light/[.12] dark:bg-on-surface-dark/[.12] text-on-surface-light/[.38] dark:text-on-surface-dark/[.38] cursor-not-allowed;
+      @apply !bg-on-surface-light/[.12] dark:!bg-on-surface-dark/[.12] !text-on-surface-light/[.38] dark:!text-on-surface-dark/[.38] !cursor-not-allowed after:!hidden !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
     }
 
     &.--disabled {
-      @apply !bg-on-surface-light/[.12] dark:!bg-on-surface-dark/[.12] !text-on-surface-light/[.38] dark:!text-on-surface-dark/[.38] !cursor-not-allowed;
+      @apply !bg-on-surface-light/[.12] dark:!bg-on-surface-dark/[.12] !text-on-surface-light/[.38] dark:!text-on-surface-dark/[.38] !cursor-not-allowed after:!hidden !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
     }
 
     &:hover {
