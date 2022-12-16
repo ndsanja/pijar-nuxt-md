@@ -1,35 +1,35 @@
 @layer base {
   :root {
     /* light */
-    --md-sys-color-primary-light: #6750a4;
-    --md-sys-color-on-primary-light: #ffffff;
-    --md-sys-color-primary-container-light: #eaddff;
-    --md-sys-color-on-primary-container-light: #21005d;
-    --md-sys-color-secondary-light: #625b71;
-    --md-sys-color-on-secondary-light: #ffffff;
-    --md-sys-color-secondary-container-light: #e8def8;
-    --md-sys-color-on-secondary-container-light: #1d192b;
-    --md-sys-color-tertiary-light: #7d5260;
-    --md-sys-color-on-tertiary-light: #ffffff;
-    --md-sys-color-tertiary-container-light: #ffd8e4;
-    --md-sys-color-on-tertiary-container-light: #31111d;
-    --md-sys-color-error-light: #b3261e;
-    --md-sys-color-on-error-light: #ffffff;
-    --md-sys-color-error-container-light: #f9dedc;
-    --md-sys-color-on-error-container-light: #410e0b;
-    --md-sys-color-outline-light: #79747e;
-    --md-sys-color-background-light: #fffbfe;
-    --md-sys-color-on-background-light: #1c1b1f;
-    --md-sys-color-surface-light: #fffbfe;
-    --md-sys-color-on-surface-light: #1c1b1f;
-    --md-sys-color-surface-variant-light: #e7e0ec;
-    --md-sys-color-on-surface-variant-light: #49454f;
-    --md-sys-color-inverse-surface-light: #313033;
-    --md-sys-color-inverse-on-surface-light: #f4eff4;
-    --md-sys-color-inverse-primary-light: #d0bcff;
-    --md-sys-color-shadow-light: #000000;
-    --md-sys-color-surface-tint-light: #6750a4;
-    --md-sys-color-outline-variant-light: #cac4d0;
-    --md-sys-color-scrim-light: #000000;
+    --md-sys-color-primary-light: 0 107 95;
+    --md-sys-color-on-primary-light: 255 255 255;
+    --md-sys-color-primary-container-light: 113 248 228;
+    --md-sys-color-on-primary-container-light: 0 32 28;
+    --md-sys-color-secondary-light: 74 99 94;
+    --md-sys-color-on-secondary-light: 255 255 255;
+    --md-sys-color-secondary-container-light: 204 232 226;
+    --md-sys-color-on-secondary-container-light: 6 32 28;
+    --md-sys-color-tertiary-light: 69 97 121;
+    --md-sys-color-on-tertiary-light: 255 255 255;
+    --md-sys-color-tertiary-container-light: 203 230 255;
+    --md-sys-color-on-tertiary-container-light: 0 30 49;
+    --md-sys-color-error-light: 186 26 26;
+    --md-sys-color-on-error-light: 255 255 255;
+    --md-sys-color-error-container-light: 255 218 214;
+    --md-sys-color-on-error-container-light: 65 0 2;
+    --md-sys-color-outline-light: 111 121 118;
+    --md-sys-color-background-light: 250 253 251;
+    --md-sys-color-on-background-light: 25 28 27;
+    --md-sys-color-surface-light: 250 253 251;
+    --md-sys-color-on-surface-light: 25 28 27;
+    --md-sys-color-surface-variant-light: 218 229 225;
+    --md-sys-color-on-surface-variant-light: 63 73 70;
+    --md-sys-color-inverse-surface-light: 45 49 48;
+    --md-sys-color-inverse-on-surface-light: 239 241 239;
+    --md-sys-color-inverse-primary-light: 79 219 200;
+    --md-sys-color-shadow-light: 0 0 0;
+    --md-sys-color-surface-tint-light: 250 253 251;
+    --md-sys-color-outline-variant-light: 190 201 197;
+    --md-sys-color-scrim-light: 0 0 0;
   }
 }

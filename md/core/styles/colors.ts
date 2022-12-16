@@ -244,8 +244,6 @@ export const generateColor = (color: string) => {
     ),
     scrimDark: setCssVar('--md-sys-color-scrim-dark', argb.dark.scrim),
   };
-
-  return colorGenerator;
 };
 
 // const color = theme.schemes;

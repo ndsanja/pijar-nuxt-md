@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { generateColor } from '~~/md/core/styles/colors';
+import { generateColor } from '~~/md/core/styles/colors'
 
 onMounted(() => {
   generateColor('#14b8a6')
