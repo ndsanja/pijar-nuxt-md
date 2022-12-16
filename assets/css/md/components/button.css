@@ -11,13 +11,14 @@
     }
 
     &:hover {
-      @apply after:inset-0 after:opacity-state-hover shadow-elevation-1-light;
+      @apply after:inset-0 after:opacity-state-hover shadow-elevation-1-light dark:shadow-elevation-1-dark;
     }
     &:focus {
-      @apply after:inset-0 after:opacity-state-focus shadow-elevation-0-light;
+      @apply after:inset-0 after:opacity-state-focus shadow-elevation-0-light dark:shadow-elevation-0-dark;
     }
     &:active {
-      @apply hover:after:inset-0 hover:after:opacity-20 shadow-elevation-0-light;
+      @apply: after: inset-0: after: opacity-20 shadow-elevation-0-light dark:
+        shadow-elevation-0-dark;
     }
 
     &.icon-start {

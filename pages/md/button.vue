@@ -31,7 +31,7 @@ onMounted(() => {
           <span class="Button__icon">+</span>
           <span class="Button__label">base</span>
         </button>
-        <button class="Button variant-filled color-primary icon-start" disabled>
+        <button class="Button variant-filled color-primary icon-start">
           <span class="Button__icon">+</span>
           <span class="Button__label">primary</span>
         </button>

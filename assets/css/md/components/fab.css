@@ -1,0 +1,169 @@
+@layer components {
+  .Fab {
+    @apply relative overflow-hidden inline-flex items-center justify-center h-14 w-14 text-2xl rounded-[16px] m-4 after:absolute !shadow-elevation-3-light dark:!shadow-elevation-3-dark shadow-shadow-light/[0] dark:shadow-shadow-dark/[0];
+
+    &:disabled {
+      @apply !bg-on-surface-light/[.12] dark:!bg-on-surface-dark/[.12] !text-on-surface-light/[.38] dark:!text-on-surface-dark/[.38] !cursor-not-allowed after:!hidden !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
+    }
+
+    &.--disabled {
+      @apply !bg-on-surface-light/[.12] dark:!bg-on-surface-dark/[.12] !text-on-surface-light/[.38] dark:!text-on-surface-dark/[.38] !cursor-not-allowed after:!hidden !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
+    }
+
+    &:hover {
+      @apply after:inset-0 after:opacity-state-hover !shadow-elevation-4-light dark:hover:!shadow-elevation-4-dark;
+    }
+    &:focus {
+      @apply after:inset-0 after:opacity-state-focus !shadow-elevation-3-light dark:focus:!shadow-elevation-3-dark;
+    }
+    &:active {
+      @apply after:inset-0 after:opacity-20 !shadow-elevation-3-light dark:active:!shadow-elevation-3-dark;
+    }
+
+    &.size-sm {
+      @apply h-10 w-10 rounded-[12px] text-2xl;
+    }
+
+    &.size-md {
+      @apply h-14 w-14 rounded-[16px] text-2xl;
+    }
+
+    &.size-lg {
+      @apply h-24 w-24 rounded-[28px] text-4xl;
+    }
+
+    > .Fab__icon {
+      @apply text-2xl;
+
+      &.size-sm {
+        @apply text-2xl;
+      }
+      &.size-md {
+        @apply text-2xl;
+      }
+      &.size-lg {
+        @apply text-4xl;
+      }
+    }
+
+    /* BTN SURFACE */
+    &.color-surface {
+      @apply !bg-surface-variant-light dark:!bg-surface-variant-dark !text-on-surface-variant-light dark:!text-on-surface-variant-dark after:bg-primary-light dark:after:bg-primary-dark after:inset-0 after:opacity-[.12];
+
+      &:hover {
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+      }
+
+      &:focus {
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+      }
+
+      &:active {
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+      }
+
+      &.--active {
+        @apply bg-surface-light dark:bg-surface-dark text-on-surface-light dark:text-on-surface-dark;
+      }
+
+      &.--loading {
+        @apply bg-surface-light dark:bg-surface-dark text-on-surface-light dark:text-on-surface-dark;
+      }
+    }
+
+    /* BTN PRIMARY */
+    &.color-primary {
+      @apply !bg-primary-container-light dark:!bg-primary-container-dark !text-on-primary-container-light dark:!text-on-primary-container-dark after:bg-primary-light dark:after:bg-primary-dark after:inset-0 after:opacity-[.12];
+
+      &:hover {
+        @apply after:bg-on-primary-container-light dark:after:bg-on-primary-container-dark;
+      }
+
+      &:focus {
+        @apply after:bg-on-primary-container-light dark:after:bg-on-primary-container-dark;
+      }
+
+      &:active {
+        @apply after:bg-on-primary-container-light dark:after:bg-on-primary-container-dark;
+      }
+
+      &.--active {
+        @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
+      }
+
+      &.--loading {
+        @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
+      }
+    }
+    /* BTN SECONDARY */
+    &.color-secondary {
+      @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark after:bg-secondary-light dark:after:bg-secondary-dark after:inset-0 after:opacity-[.12];
+      &:hover {
+        @apply after:bg-on-secondary-container-light dark:after:bg-on-secondary-container-dark;
+      }
+
+      &:focus {
+        @apply after:bg-on-secondary-container-light dark:after:bg-on-secondary-container-dark;
+      }
+
+      &:active {
+        @apply after:bg-on-secondary-container-light dark:after:bg-on-secondary-container-dark;
+      }
+
+      &.--active {
+        @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
+      }
+
+      &.--loading {
+        @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
+      }
+    }
+    /* BTN TERTIARY */
+    &.color-tertiary {
+      @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark after:bg-tertiary-light dark:after:bg-tertiary-dark after:inset-0 after:opacity-[.12];
+      &:hover {
+        @apply after:bg-on-tertiary-container-light dark:after:bg-on-tertiary-container-dark;
+      }
+
+      &:focus {
+        @apply after:bg-on-tertiary-container-light dark:after:bg-on-tertiary-container-dark;
+      }
+
+      &:active {
+        @apply after:bg-on-tertiary-container-light dark:after:bg-on-tertiary-container-dark;
+      }
+
+      &.--active {
+        @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
+      }
+
+      &.--loading {
+        @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
+      }
+    }
+    /* BTN ERROR */
+    &.color-error {
+      @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark after:bg-error-light dark:after:bg-error-dark after:inset-0 after:opacity-[.12];
+
+      &:hover {
+        @apply after:bg-on-error-container-light dark:after:bg-on-error-container-dark;
+      }
+
+      &:focus {
+        @apply after:bg-on-error-container-light dark:after:bg-on-error-container-dark;
+      }
+
+      &:active {
+        @apply after:bg-on-error-container-light dark:after:bg-on-error-container-dark;
+      }
+
+      &.--active {
+        @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
+      }
+
+      &.--loading {
+        @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
 @import './md/styles/theme.light.css' (prefers-color-scheme: light);
 @import './md/styles/theme.dark.css' (prefers-color-scheme: dark);
 @import './md/components/button.css';
+@import './md/components/fab.css';
 
 @tailwind base;
 @tailwind components;

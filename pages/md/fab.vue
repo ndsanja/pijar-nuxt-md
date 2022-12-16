@@ -7,6 +7,90 @@ import { Fab } from '~~/md/vue';
     <div class="flex flex-col items-center justify-center">
       <h1 class="text-xl mb-2">default</h1>
       <div class="flex items-center justify-center">
+        <button class="Fab color-surface">
+          <span class="Fab__icon">+</span>
+        </button>
+        <button class="Fab color-primary">
+          <span class="Fab__icon">+</span>
+        </button>
+        <button class="Fab color-secondary">
+          <span class="Fab__icon">+</span>
+        </button>
+        <button class="Fab color-tertiary">
+          <span class="Fab__icon">+</span>
+        </button>
+        <button class="Fab color-error">
+          <span class="Fab__icon">+</span>
+        </button>
+
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="text-xl mb-2">small</h1>
+      <div class="flex items-center justify-center">
+        <button class="Fab size-sm color-surface">
+          <span class="Fab__icon size-sm">+</span>
+        </button>
+        <button class="Fab size-sm color-primary">
+          <span class="Fab__icon size-sm">+</span>
+        </button>
+        <button class="Fab size-sm color-secondary">
+          <span class="Fab__icon size-sm">+</span>
+        </button>
+        <button class="Fab size-sm color-tertiary">
+          <span class="Fab__icon size-sm">+</span>
+        </button>
+        <button class="Fab size-sm color-error">
+          <span class="Fab__icon size-sm">+</span>
+        </button>
+
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="text-xl mb-2">default</h1>
+      <div class="flex items-center justify-center">
+        <button class="Fab size-md color-surface">
+          <span class="Fab__icon size-md">+</span>
+        </button>
+        <button class="Fab size-md color-primary">
+          <span class="Fab__icon size-md">+</span>
+        </button>
+        <button class="Fab size-md color-secondary">
+          <span class="Fab__icon size-md">+</span>
+        </button>
+        <button class="Fab size-md color-tertiary">
+          <span class="Fab__icon size-md">+</span>
+        </button>
+        <button class="Fab size-md color-error">
+          <span class="Fab__icon size-md">+</span>
+        </button>
+
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="text-xl mb-2">default</h1>
+      <div class="flex items-center justify-center">
+        <button class="Fab size-lg color-surface">
+          <span class="Fab__icon size-lg">+</span>
+        </button>
+        <button class="Fab size-lg color-primary">
+          <span class="Fab__icon size-lg">+</span>
+        </button>
+        <button class="Fab size-lg color-secondary">
+          <span class="Fab__icon size-lg">+</span>
+        </button>
+        <button class="Fab size-lg color-tertiary">
+          <span class="Fab__icon size-lg">+</span>
+        </button>
+        <button class="Fab size-lg color-error">
+          <span class="Fab__icon size-lg">+</span>
+        </button>
+
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="text-xl mb-2">default</h1>
+      <div class="flex items-center justify-center">
         <Fab>
           +
         </Fab>
