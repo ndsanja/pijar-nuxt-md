@@ -1,0 +1,20 @@
+@layer components {
+  .ButtonGroup {
+    @apply flex h-10 outline outline-1 outline-outline-light dark:outline-outline-dark rounded-full;
+
+    > :last-child {
+      @apply !border-r-0;
+    }
+
+    > .ButtonGroup__item {
+      @apply whitespace-nowrap min-w-[48px] px-3 inline-flex items-center justify-center space-x-2 border-r border-outline-light dark:border-outline-dark;
+
+      > .ButtonGroup__item__label {
+        @apply text-label-large font-label-large tracking-label-large leading-label-large;
+      }
+      > .ButtonGroup__item__icon {
+        @apply text-lg;
+      }
+    }
+  }
+}

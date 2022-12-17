@@ -6,6 +6,7 @@
 @import './md/components/button.css';
 @import './md/components/fab.css';
 @import './md/components/extended-fab.css';
+@import './md/components/button-group.css';
 
 @tailwind base;
 @tailwind components;
