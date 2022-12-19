@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { generateColor } from '~~/md/core/styles/colors';
-import { Fab } from '~~/md/vue';
 </script>
 
 <template>
@@ -28,7 +27,7 @@ import { Fab } from '~~/md/vue';
           </button>
           <button class="ButtonGroup__item">
             <span class="ButtonGroup__item__icon">+</span>
-            <span class="ButtonGroup__item__label">Label 3</span>
+            <span class="ButtonGroup__item__label">Labelddddddddddd 3</span>
           </button>
           <button class="ButtonGroup__item">
             <span class="ButtonGroup__item__icon">+</span>

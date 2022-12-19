@@ -1,9 +1,12 @@
 @layer components {
   .ButtonGroup {
-    @apply flex h-10 outline outline-1 outline-outline-light dark:outline-outline-dark rounded-full;
+    @apply flex basis-full h-10 outline outline-1 outline-outline-light dark:outline-outline-dark rounded-full;
 
     > :last-child {
-      @apply !border-r-0;
+      @apply !border-r-0 !pr-4;
+    }
+    > :first-child {
+      @apply !pl-4;
     }
 
     > .ButtonGroup__item {

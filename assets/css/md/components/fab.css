@@ -62,11 +62,11 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-surface-light dark:bg-surface-dark text-on-surface-light dark:text-on-surface-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-surface-light dark:bg-surface-dark text-on-surface-light dark:text-on-surface-dark;
       }
     }
@@ -87,11 +87,11 @@
         @apply after:bg-on-primary-container-light dark:after:bg-on-primary-container-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
       }
     }
@@ -110,11 +110,11 @@
         @apply after:bg-on-secondary-container-light dark:after:bg-on-secondary-container-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
       }
     }
@@ -133,11 +133,11 @@
         @apply after:bg-on-tertiary-container-light dark:after:bg-on-tertiary-container-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
       }
     }
@@ -157,11 +157,11 @@
         @apply after:bg-on-error-container-light dark:after:bg-on-error-container-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
       }
     }

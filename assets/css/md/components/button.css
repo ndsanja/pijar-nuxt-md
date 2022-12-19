@@ -51,11 +51,11 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
       /* BTN PRIMARY FILLED */
@@ -73,11 +73,11 @@
           @apply after:bg-on-primary-light dark:after:bg-on-primary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
       }
@@ -96,11 +96,11 @@
           @apply after:bg-on-secondary-light dark:after:bg-on-secondary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
       }
@@ -119,11 +119,11 @@
           @apply after:bg-on-tertiary-light dark:after:bg-on-tertiary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
       }
@@ -143,11 +143,11 @@
           @apply after:bg-on-error-light dark:after:bg-on-error-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
       }
@@ -169,11 +169,11 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
       /* BTN-PRIMARY TONAL */
@@ -191,11 +191,11 @@
           @apply after:bg-on-primary-container-light dark:after:bg-on-primary-container-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-primary-light dark:bg-primary-dark text-on-primary-light dark:text-on-primary-dark;
         }
       }
@@ -214,11 +214,11 @@
           @apply after:bg-on-secondary-container-light dark:after:bg-on-secondary-container-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-secondary-light dark:bg-secondary-dark text-on-secondary-light dark:text-on-secondary-dark;
         }
       }
@@ -237,11 +237,11 @@
           @apply after:bg-on-tertiary-container-light dark:after:bg-on-tertiary-container-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-tertiary-light dark:bg-tertiary-dark text-on-tertiary-light dark:text-on-tertiary-dark;
         }
       }
@@ -260,11 +260,11 @@
           @apply after:bg-on-error-container-light dark:after:bg-on-error-container-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-error-light dark:bg-error-dark text-on-error-light dark:text-on-error-dark;
         }
       }
@@ -286,11 +286,11 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
@@ -309,11 +309,11 @@
           @apply after:bg-primary-light dark:after:bg-primary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
       }
@@ -332,11 +332,11 @@
           @apply after:bg-secondary-light dark:after:bg-secondary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
       }
@@ -355,11 +355,11 @@
           @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
       }
@@ -378,11 +378,11 @@
           @apply after:bg-error-light dark:after:bg-error-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
       }
@@ -402,11 +402,11 @@
         @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
       }
 
-      &.--active {
+      &.is-active {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
-      &.--loading {
+      &.is-loading {
         @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       }
 
@@ -425,11 +425,11 @@
           @apply after:bg-primary-light dark:after:bg-primary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
         }
       }
@@ -448,11 +448,11 @@
           @apply after:bg-secondary-light dark:after:bg-secondary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
         }
       }
@@ -471,11 +471,11 @@
           @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
         }
       }
@@ -494,11 +494,11 @@
           @apply after:bg-error-light dark:after:bg-error-dark;
         }
 
-        &.--active {
+        &.is-active {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
 
-        &.--loading {
+        &.is-loading {
           @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
         }
       }

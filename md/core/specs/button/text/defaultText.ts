@@ -31,8 +31,8 @@ export const defaultButtonTextSpecs = (props: ButtonPropsType) => {
     ${startIcon ? 'icon-start' : ''}
     ${endIcon ? 'icon-end' : ''}
     ${btnColor}
-    ${active ? '--active' : ''}
-    ${loading ? '--loading' : ''}
+    ${active ? 'is-active' : ''}
+    ${loading ? 'is-loading' : ''}
     `),
 
     labelText: tw(`
