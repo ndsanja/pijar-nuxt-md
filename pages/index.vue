@@ -13,6 +13,13 @@ onMounted(() => {
     <NuxtLink to="/md/fab" class="underline">goto fab</NuxtLink>
     <NuxtLink to="/md/extended-fab" class="underline">goto extended fab</NuxtLink>
     <NuxtLink to="/md/button-group" class="underline">goto button group</NuxtLink>
+    <NuxtLink to="/md/badge" class="underline">goto badge</NuxtLink>
+    <NuxtLink to="/md/bottom-appbar" class="underline">goto bottom appbar</NuxtLink>
+    <NuxtLink to="/md/bottom-sheet" class="underline">goto bottom sheet</NuxtLink>
+    <NuxtLink to="/md/card" class="underline">goto card</NuxtLink>
+    <NuxtLink to="/md/checkbox" class="underline">goto checkbox</NuxtLink>
+    <NuxtLink to="/md/chip" class="underline">goto chip</NuxtLink>
+    <NuxtLink to="/md/dialog" class="underline">goto dialog</NuxtLink>
     <div class="flex space-x-2">
       <button @click="generateColor('#10b981')">emerald</button>
       <button @click="generateColor('#f59e0b')">amber</button>

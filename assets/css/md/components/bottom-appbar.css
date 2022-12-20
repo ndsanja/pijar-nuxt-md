@@ -1,0 +1,13 @@
+@layer components {
+  .BottomAppbar {
+    @apply fixed bottom-0 w-full h-20 flex items-center justify-start px-4 py-3 space-x-2 bg-surface-variant-light dark:bg-surface-variant-dark;
+
+    > .BottomAppbar__item {
+      @apply h-12 w-12 inline-flex items-center justify-center;
+
+      &.is-grow {
+        @apply flex-1;
+      }
+    }
+  }
+}

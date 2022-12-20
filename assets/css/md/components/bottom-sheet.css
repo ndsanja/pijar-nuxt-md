@@ -1,4 +1,5 @@
 @layer components {
   .BottomSheet {
+    @apply relative min-h-[100px] min-w-full max-w-[640px] rounded-t-2xl bg-surface-variant-light dark:bg-surface-variant-dark;
   }
 }
