@@ -275,115 +275,115 @@
       @apply text-on-surface-variant-light dark:text-on-surface-variant-dark;
 
       &:hover {
-        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &:focus {
-        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &:active {
-        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &.is-active {
-        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
+        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &.is-loading {
-        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
+        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       /* BTN PRIMARY TEXT */
       &.color-primary {
         @apply text-primary-light dark:text-primary-dark;
         &:hover {
-          @apply after:bg-primary-light dark:after:bg-primary-dark;
+          @apply after:bg-primary-light dark:after:bg-primary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-primary-light dark:after:bg-primary-dark;
+          @apply after:bg-primary-light dark:after:bg-primary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-primary-light dark:after:bg-primary-dark;
+          @apply after:bg-primary-light dark:after:bg-primary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
+          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
+          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
       /* BTN SECONDARY TEXT */
       &.color-secondary {
         @apply text-secondary-light dark:text-secondary-dark;
         &:hover {
-          @apply after:bg-secondary-light dark:after:bg-secondary-dark;
+          @apply after:bg-secondary-light dark:after:bg-secondary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-secondary-light dark:after:bg-secondary-dark;
+          @apply after:bg-secondary-light dark:after:bg-secondary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-secondary-light dark:after:bg-secondary-dark;
+          @apply after:bg-secondary-light dark:after:bg-secondary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
+          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
+          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
       /* BTN TERTIARY TEXT */
       &.color-tertiary {
         @apply text-tertiary-light dark:text-tertiary-dark;
         &:hover {
-          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
+          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
+          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
+          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
+          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
+          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
       /* BTN ERROR TEXT */
       &.color-error {
         @apply text-error-light dark:text-error-dark;
         &:hover {
-          @apply after:bg-error-light dark:after:bg-error-dark;
+          @apply after:bg-error-light dark:after:bg-error-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-error-light dark:after:bg-error-dark;
+          @apply after:bg-error-light dark:after:bg-error-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-error-light dark:after:bg-error-dark;
+          @apply after:bg-error-light dark:after:bg-error-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
+          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
+          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
     }
@@ -391,115 +391,115 @@
     &.variant-outlined {
       @apply outline outline-1 outline-surface-variant-light dark:outline-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
       &:hover {
-        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &:focus {
-        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &:active {
-        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark;
+        @apply after:bg-on-surface-variant-light dark:after:bg-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &.is-active {
-        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
+        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       &.is-loading {
-        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark;
+        @apply bg-surface-variant-light dark:bg-surface-variant-dark text-on-surface-variant-light dark:text-on-surface-variant-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
       }
 
       /* BTN PRIMARY OUTLINED */
       &.color-primary {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-primary-light dark:text-primary-dark;
         &:hover {
-          @apply after:bg-primary-light dark:after:bg-primary-dark;
+          @apply after:bg-primary-light dark:after:bg-primary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-primary-light dark:after:bg-primary-dark;
+          @apply after:bg-primary-light dark:after:bg-primary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-primary-light dark:after:bg-primary-dark;
+          @apply after:bg-primary-light dark:after:bg-primary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
+          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark;
+          @apply bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-on-primary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
       /* BTN SECONDARY OUTLINED */
       &.color-secondary {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-secondary-light dark:text-secondary-dark;
         &:hover {
-          @apply after:bg-secondary-light dark:after:bg-secondary-dark;
+          @apply after:bg-secondary-light dark:after:bg-secondary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-secondary-light dark:after:bg-secondary-dark;
+          @apply after:bg-secondary-light dark:after:bg-secondary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-secondary-light dark:after:bg-secondary-dark;
+          @apply after:bg-secondary-light dark:after:bg-secondary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
+          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark;
+          @apply bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
       /* BTN TERTIARY OUTLINED */
       &.color-tertiary {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-tertiary-light dark:text-tertiary-dark;
         &:hover {
-          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
+          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
+          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark;
+          @apply after:bg-tertiary-light dark:after:bg-tertiary-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
+          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark;
+          @apply bg-tertiary-container-light dark:bg-tertiary-container-dark text-on-tertiary-container-light dark:text-on-tertiary-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
       /* BTN ERROR OUTLINED */
       &.color-error {
         @apply outline outline-1 outline-outline-light dark:outline-outline-dark text-error-light dark:text-error-dark;
         &:hover {
-          @apply after:bg-error-light dark:after:bg-error-dark;
+          @apply after:bg-error-light dark:after:bg-error-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:focus {
-          @apply after:bg-error-light dark:after:bg-error-dark;
+          @apply after:bg-error-light dark:after:bg-error-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &:active {
-          @apply after:bg-error-light dark:after:bg-error-dark;
+          @apply after:bg-error-light dark:after:bg-error-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-active {
-          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
+          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
 
         &.is-loading {
-          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark;
+          @apply bg-error-container-light dark:bg-error-container-dark text-on-error-container-light dark:text-on-error-container-dark !shadow-elevation-0-light dark:!shadow-elevation-0-dark;
         }
       }
     }

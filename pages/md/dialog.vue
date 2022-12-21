@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { generateColor } from '~~/md/core/styles/colors';
+
+const showBasicDialog = ref(false)
+const showFullScreenDialog = ref(true)
 </script>
 
 <template>
@@ -16,9 +19,20 @@ import { generateColor } from '~~/md/core/styles/colors';
     <div class="flex flex-col items-center justify-center">
       <h1 class="text-xl mb-2">Dialog</h1>
       <div class="flex items-center justify-center space-x-2">
+        <button class="Button variant-filled color-primary" @click="showBasicDialog = true">
+          <span class="Button__label">
+            Reg Dialog
+          </span>
+        </button>
+        <button class="Button variant-filled color-primary" @click="showFullScreenDialog = true">
+          <span class="Button__label">
+            Full Dialog
+          </span>
+        </button>
         <!--Start COMPONENT -->
-        <!-- Assist Chip -->
-        <div class="fixed inset-0 flex items-center justify-center bg-scrim-light/20 dark:bg-scrim-dark/20">
+        <!-- Basic dialog -->
+        <div v-if="showBasicDialog" @click="showBasicDialog = false"
+          class="fixed inset-0 flex items-center justify-center bg-scrim-light/20 dark:bg-scrim-dark/20">
           <div
             class="flex flex-col space-y-4 p-6 rounded-[28px] w-full min-w-[280px] max-w-[560px] bg-surface-variant-light dark:bg-surface-variant-dark">
             <span class="self-center text-center text-2xl">+</span>
@@ -43,6 +57,30 @@ import { generateColor } from '~~/md/core/styles/colors';
                 <span class="Button__label">deny</span>
               </button>
             </div>
+          </div>
+        </div>
+
+        <!-- Full screen dialog -->
+        <div v-if="showFullScreenDialog"
+          class="fixed inset-0 flex items-center justify-center bg-scrim-light/20 dark:bg-scrim-dark/20">
+          <div
+            class="min-h-screen h-screen md flex flex-col space-y-4 p-6 w-full max-w-[560px] bg-surface-variant-light dark:bg-surface-variant-dark">
+            <div class="h-14 flex items-center">
+              <button class="p-4" @click="showFullScreenDialog = false">
+                X
+              </button>
+              <h1 class="flex-1 text-title-large font-title-large tracking-title-large leading-title-large">This is
+                title</h1>
+              <button class="Button variant-text color-primary">
+                <span class="Button__label">Save</span>
+              </button>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sint nihil voluptates ex facilis optio
+              dolorum saepe? Labore, odit ab, error rem, itaque alias nesciunt officiis nostrum reiciendis tempora
+              possimus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sint nihil voluptates ex facilis optio
+              dolorum saepe? Labore, odit ab, error rem, itaque alias nesciunt officiis nostrum reiciendis tempora
+              possimus!</p>
           </div>
         </div>
 
