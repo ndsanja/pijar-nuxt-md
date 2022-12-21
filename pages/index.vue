@@ -22,6 +22,7 @@ onMounted(() => {
     <NuxtLink to="/md/dialog" class="underline">goto dialog</NuxtLink>
     <NuxtLink to="/md/divider" class="underline">divider</NuxtLink>
     <NuxtLink to="/md/bottom-navbar" class="underline">bottom-navbar</NuxtLink>
+    <NuxtLink to="/md/drawer" class="underline">drawer</NuxtLink>
     <div class="flex space-x-2">
       <button @click="generateColor('#10b981')">emerald</button>
       <button @click="generateColor('#f59e0b')">amber</button>
