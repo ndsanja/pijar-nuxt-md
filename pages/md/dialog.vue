@@ -2,7 +2,7 @@
 import { generateColor } from '~~/md/core/styles/colors';
 
 const showBasicDialog = ref(false)
-const showFullScreenDialog = ref(true)
+const showFullScreenDialog = ref(false)
 </script>
 
 <template>

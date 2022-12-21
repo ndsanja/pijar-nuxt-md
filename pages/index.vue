@@ -20,6 +20,8 @@ onMounted(() => {
     <NuxtLink to="/md/checkbox" class="underline">goto checkbox</NuxtLink>
     <NuxtLink to="/md/chip" class="underline">goto chip</NuxtLink>
     <NuxtLink to="/md/dialog" class="underline">goto dialog</NuxtLink>
+    <NuxtLink to="/md/divider" class="underline">divider</NuxtLink>
+    <NuxtLink to="/md/bottom-navbar" class="underline">bottom-navbar</NuxtLink>
     <div class="flex space-x-2">
       <button @click="generateColor('#10b981')">emerald</button>
       <button @click="generateColor('#f59e0b')">amber</button>
