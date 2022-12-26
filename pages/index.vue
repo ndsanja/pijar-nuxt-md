@@ -24,6 +24,9 @@ onMounted(() => {
     <NuxtLink to="/md/bottom-navbar" class="underline">bottom-navbar</NuxtLink>
     <NuxtLink to="/md/drawer" class="underline">drawer</NuxtLink>
     <NuxtLink to="/md/rail" class="underline">rail</NuxtLink>
+    <NuxtLink to="/md/progres" class="underline">progres</NuxtLink>
+    <NuxtLink to="/md/radio" class="underline">radio</NuxtLink>
+    <NuxtLink to="/md/search" class="underline">search</NuxtLink>
     <div class="flex space-x-2">
       <button @click="generateColor('#10b981')">emerald</button>
       <button @click="generateColor('#f59e0b')">amber</button>
